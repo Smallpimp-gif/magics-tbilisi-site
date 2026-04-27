@@ -1,0 +1,2104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Magics Tbilisi — wooden cable reels & birch plywood drum components</title>
+<meta name="description" content="We manufacture wooden cable reels and birch plywood drums Ø600–3000 mm for cable manufacturers and contractors. CNC factory in Tbilisi, palletised dispatch to the EU, UK and US. Quote in 24 hours." />
+<meta property="og:title" content="Magics Tbilisi — wooden cable reels & birch plywood drum components" />
+<meta property="og:description" content="Manufacturing in Tbilisi since 2014. Reels Ø600–3000 mm for cable manufacturers, telecom and fiber operators. WhatsApp: +995 32 000 0000." />
+<meta property="og:locale" content="en_US" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+  // Global image fallback
+  document.addEventListener('error', function (e) {
+    var t = e.target;
+    if (!t || t.tagName !== 'IMG' || t.dataset.fallbackApplied) return;
+    t.dataset.fallbackApplied = '1';
+    var seed = encodeURIComponent((t.alt || 'magics').toLowerCase().replace(/\s+/g, '-')).slice(0, 40) || 'magics';
+    var w = t.naturalWidth || parseInt(t.getAttribute('width'), 10) || 1200;
+    var h = t.naturalHeight || parseInt(t.getAttribute('height'), 10) || Math.round(w * 0.66);
+    t.src = 'https://picsum.photos/seed/' + seed + '/' + w + '/' + h;
+  }, true);
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:     '#0E0E0E',
+          paper:   '#FFFFFF',
+          surface: '#F2F2F2',
+          card:    '#EEEEEE',
+          line:    '#E2E2E2',
+          ash:     '#6E6E73',
+          mute:    '#A1A1A6',
+        },
+        fontFamily: {
+          sans: ['"Inter Tight"', 'ui-sans-serif', 'system-ui'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    /* === PLACEHOLDER MODE ===
+       1 = подсветить все плейсхолдер-данные (телефоны, цены, реквизиты)
+       0 = production (подсветка пропадёт)
+       Полный список плейсхолдеров — в CONTENT.md рядом с этим файлом. */
+    --placeholder-on: 0;
+  }
+
+  /* Placeholder marker — yellow dashed underline + cursor hint.
+     Toggle глобально через --placeholder-on в :root. */
+  [data-placeholder] {
+    background-image: linear-gradient(transparent calc(100% - 2px), rgba(220, 160, 0, calc(0.7 * var(--placeholder-on))) 0);
+    background-repeat: no-repeat;
+    background-size: calc(100% * var(--placeholder-on)) 100%;
+    cursor: help;
+  }
+  [data-placeholder]::after {
+    content: " " attr(data-placeholder);
+    color: rgba(180, 130, 0, calc(0.85 * var(--placeholder-on)));
+    font-size: 0.7em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-left: 4px;
+    opacity: var(--placeholder-on);
+    transition: opacity .2s ease;
+  }
+  @media (prefers-color-scheme: dark) {
+    [data-placeholder] {
+      background-image: linear-gradient(transparent calc(100% - 2px), rgba(255, 200, 50, calc(0.6 * var(--placeholder-on))) 0);
+    }
+  }
+
+  html, body {
+    background: #FFFFFF;
+    color: #0E0E0E;
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
+    line-height: 1.6;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  a, button, .product-card, .app-card { touch-action: manipulation; }
+  body { overflow-x: hidden; }
+  ::selection { background: #0E0E0E; color: #fff; }
+
+  /* Demo-mode indicator (visible only when --placeholder-on: 1) */
+  .demo-badge {
+    position: fixed; left: 16px; top: 16px; z-index: 90;
+    display: flex; align-items: center; gap: 8px;
+    background: #0E0E0E; color: #FFD23F;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 12px 30px -10px rgba(0,0,0,0.3);
+    opacity: var(--placeholder-on);
+    pointer-events: var(--placeholder-on, none);
+  }
+  .demo-badge::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: #FFD23F;
+    animation: demo-pulse 2s ease-in-out infinite;
+  }
+  @keyframes demo-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  @media (max-width: 767px) {
+    .demo-badge { left: auto; right: 12px; top: 12px; font-size: 10px; padding: 6px 10px; }
+  }
+
+  /* === ENHANCEMENTS === */
+
+  /* Page-load fade — gentle entry without blocking content */
+  body { opacity: 0; transition: opacity .4s var(--ease); }
+  body.is-loaded { opacity: 1; }
+
+  /* Scroll-progress bar — thin ink line at the very top */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: transparent;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .scroll-progress::before {
+    content: ""; display: block; height: 100%;
+    background: #0E0E0E;
+    transform-origin: left center;
+    transform: scaleX(var(--scroll, 0));
+    transition: transform .15s linear;
+  }
+
+  /* Sticky desktop header — morphs from transparent to white-with-shadow */
+  .nav-sticky {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 80;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    transform: translateY(-100%);
+    transition: transform .35s var(--ease);
+    color: #0A0A0A;
+  }
+  .nav-sticky.is-visible { transform: translateY(0); }
+  .nav-sticky a, .nav-sticky .nav-link { color: #0A0A0A; }
+
+  /* Kinetic marquee strip — endless scroll of key facts */
+  .marquee {
+    overflow: hidden;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+    padding: 14px 0;
+    background: #FFFFFF;
+  }
+  .marquee-track {
+    display: flex; gap: 48px;
+    white-space: nowrap;
+    animation: marquee-scroll 38s linear infinite;
+    will-change: transform;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  .marquee-item {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 13px; color: #6E6E73;
+    text-transform: uppercase; letter-spacing: 0.16em;
+  }
+  .marquee-item .num { color: #0E0E0E; font-weight: 600; }
+  .marquee-item::after {
+    content: "·"; color: #C7C7CC; margin-left: 36px; font-size: 18px; opacity: 0.5;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* 3D hover-tilt on product cards — subtle, GPU only */
+  @media (hover: hover) and (pointer: fine) {
+    .product-card {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    .product-card .product-img {
+      transition: transform .8s var(--ease);
+      transform-style: preserve-3d;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+    }
+    .product-card:hover .product-img {
+      transform: scale(1.06) translateZ(20px);
+    }
+  }
+
+  /* Hero parallax — image moves slower than scroll (driven by JS scroll var) */
+  .hero-parallax {
+    transform: translate3d(0, calc(var(--scroll-px, 0) * 0.18px), 0);
+    will-change: transform;
+  }
+
+  /* Spotlight follow-cursor effect — used in dark CTA section */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute; inset: -1px;
+    background: radial-gradient(450px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.07), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity .3s var(--ease);
+  }
+  .spotlight > * { position: relative; z-index: 1; }
+
+  /* Messenger icons in footer */
+  .messenger-icon {
+    display: grid; place-items: center;
+    width: 36px; height: 36px;
+    border-radius: 999px;
+    transition: transform .2s var(--ease), filter .2s var(--ease);
+  }
+  .messenger-icon:hover { transform: translateY(-2px); filter: brightness(1.1); }
+  .messenger-icon:active { transform: translateY(0) scale(0.95); }
+
+  /* FAQ accordion (native details) */
+  .faq-item { padding: 0; }
+  .faq-item > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 22px 0;
+    font-size: 17px; font-weight: 500;
+    letter-spacing: -0.01em;
+    transition: color .2s var(--ease);
+    user-select: none;
+  }
+  .faq-item > summary::-webkit-details-marker { display: none; }
+  .faq-item > summary:hover { color: #1E40FF; }
+  .faq-toggle {
+    flex: none;
+    width: 32px; height: 32px;
+    border: 1px solid #E2E2E2;
+    border-radius: 999px;
+    display: grid; place-items: center;
+    font-size: 18px; font-weight: 400;
+    color: #6E6E73;
+    transition: transform .3s var(--ease), background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+  }
+  .faq-item[open] .faq-toggle {
+    transform: rotate(45deg);
+    background: #0E0E0E;
+    color: #FFFFFF;
+    border-color: #0E0E0E;
+  }
+  .faq-body {
+    padding: 0 0 24px;
+    font-size: 14.5px;
+    color: #6E6E73;
+    line-height: 1.7;
+    max-width: 78ch;
+  }
+  @media (min-width: 768px) {
+    .faq-item > summary { padding: 28px 0; font-size: 22px; }
+    .faq-body { font-size: 15.5px; padding-bottom: 30px; }
+    .faq-toggle { width: 36px; height: 36px; font-size: 20px; }
+  }
+
+  /* Micro-magnetic effect on primary buttons */
+  .magnetic {
+    transition: transform .25s var(--ease);
+    will-change: transform;
+  }
+
+  /* Animated counter style — keeps space stable while ticking */
+  .ticker {
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2ch;
+  }
+
+  /* Skip link (a11y) */
+  .skip-link {
+    position: absolute; left: -9999px; top: 8px;
+    z-index: 100;
+    background: #0E0E0E; color: #fff;
+    padding: 10px 14px; border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+  }
+  .skip-link:focus { left: 16px; }
+
+  /* Universal focus-visible (a11y) — replaces removed default outline with branded ring */
+  :focus { outline: none; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #0E0E0E;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .product-card:focus-visible, .app-card:focus-visible {
+    outline: 2px solid #0E0E0E;
+    outline-offset: 4px;
+  }
+
+  /* Tactile :active feedback */
+  a, button { transition: transform .15s var(--ease); }
+  .cta-pill:active, .rb:active, .mobile-bottom-cta .cta-button:active,
+  .product-card:active, .app-card:active {
+    transform: translateY(1px) scale(0.995);
+  }
+
+  /* Tight display headings — +Halle vibe */
+  .display {
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+  }
+  .display-md {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+  }
+
+  /* Hero blur */
+  .hero-blur {
+    filter: blur(28px) saturate(1.1);
+    transform: scale(1.15);
+  }
+
+  /* Reveal */
+  [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+  [data-reveal].is-in { opacity: 1; transform: translateY(0); }
+  [data-reveal-stagger] > * { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  [data-reveal-stagger].is-in > * { opacity: 1; transform: translateY(0); }
+  [data-reveal-stagger].is-in > *:nth-child(1) { transition-delay: .05s }
+  [data-reveal-stagger].is-in > *:nth-child(2) { transition-delay: .15s }
+  [data-reveal-stagger].is-in > *:nth-child(3) { transition-delay: .25s }
+  [data-reveal-stagger].is-in > *:nth-child(4) { transition-delay: .35s }
+
+  /* Nav link underline */
+  .nav-link { position: relative; padding: 6px 0; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+    background: currentColor; transform: scaleX(0); transform-origin: left;
+    transition: transform .4s var(--ease);
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+
+  /* Carousel */
+  .h-snap { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .h-snap::-webkit-scrollbar { display: none; }
+  .h-snap > * { scroll-snap-align: start; }
+
+  /* Tabular monospace numerals (specs table, stats) */
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-feature-settings: "tnum";
+  }
+
+  /* Specs table — uniform cell rhythm + subtle row hover */
+  .specs-table th, .specs-table td { padding-top: 1.5rem; padding-bottom: 1.5rem; padding-right: 1.5rem; }
+  @media (min-width: 768px) { .specs-table th, .specs-table td { padding-top: 1.75rem; padding-bottom: 1.75rem; } }
+  .specs-table th { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  .specs-table td:last-child, .specs-table th:last-child { padding-right: 0; text-align: right; }
+  .specs-table tbody tr { transition: background-color .25s var(--ease); }
+  .specs-table tbody tr:hover { background-color: #FAFAFA; }
+
+  /* Quote-request button (per spec row) */
+  .quote-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 500;
+    color: #0A0A0A;
+    border-bottom: 1px solid #0A0A0A;
+    padding-bottom: 1px;
+    transition: color .2s var(--ease), border-color .2s var(--ease);
+  }
+  .quote-btn:hover { color: #25D366; border-color: #25D366; }
+  .specs-card-cta {
+    display: block;
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: #25D366; color: #FFFFFF;
+    border-radius: var(--r-sm);
+    font-size: 13px; font-weight: 600;
+    text-align: center;
+    transition: transform .15s var(--ease);
+  }
+  .specs-card-cta:active { transform: translateY(1px) scale(0.99); }
+
+  /* Trusted-by — uniform cell rhythm + subtle hover */
+  .trusted-grid > div {
+    border-bottom: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+    padding: 2.5rem 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color .25s var(--ease);
+    cursor: default;
+  }
+  @media (min-width: 768px) { .trusted-grid > div { padding: 3.5rem 1.5rem; } }
+  .trusted-grid > div:hover { background-color: #FAFAFA; }
+  .trusted-grid > div > span {
+    font-size: 14px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.22em;
+  }
+  @media (min-width: 768px) { .trusted-grid > div > span { font-size: 15px; } }
+
+  /* Small superscript number */
+  /* Certificate tiles */
+  /* === DESIGN SYSTEM RADII === */
+  /* Large surfaces (sections, dark CTA, hero photo): 24px */
+  /* Medium cards (product, cert-tile, app-card, specs-card, surface boxes): 20px */
+  /* Small buttons (contact-btn, contact-row, trust-pill, specs-card-cta): 14px */
+  /* Pills with text labels: 999px */
+  /* Circular icons: 999px */
+  :root {
+    --r-lg: 24px;
+    --r-md: 20px;
+    --r-sm: 14px;
+  }
+
+  /* Product carousel cards — was sharp, now rounded to match family */
+  .product-card { border-radius: var(--r-md); }
+
+  /* Dark CTA section block */
+  #contact > div > div { border-radius: var(--r-lg); }
+
+  /* Surface utility — when used as panel */
+  .bg-surface.rounded-2xl { border-radius: var(--r-md) !important; }
+
+  .cert-tile {
+    background: #F2F2F2;
+    border-radius: var(--r-md);
+    padding: 24px;
+    display: flex; flex-direction: column;
+    gap: 6px;
+    transition: background-color .25s var(--ease);
+  }
+  .cert-tile:hover { background: #EBEBEB; }
+  .cert-mark {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 32px; font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #0E0E0E;
+    margin-bottom: 14px;
+  }
+  .cert-name {
+    font-size: 15px; font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #0E0E0E;
+  }
+  .cert-note {
+    font-size: 12px;
+    color: #6E6E73;
+    line-height: 1.5;
+  }
+
+  /* Contact rows in the dark CTA section */
+  .contact-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 18px;
+    border: 1px solid;
+    border-radius: var(--r-sm);
+    font-weight: 600; font-size: 14px;
+    transition: filter .2s var(--ease), transform .15s var(--ease);
+  }
+  .contact-row:hover { filter: brightness(1.1); }
+  .contact-row:active { transform: translateY(1px) scale(0.995); }
+
+  .sup-num {
+    font-size: 0.55em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: inherit;
+    opacity: 0.85;
+  }
+
+  /* Vertical text */
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  /* Product card hover — lift + tinted shadow (avoid generic gray glow) */
+  .product-card {
+    cursor: pointer;
+    transition: background-color .4s var(--ease), transform .5s var(--ease), box-shadow .5s var(--ease);
+    will-change: transform;
+  }
+  .product-card:hover {
+    background-color: #E6E6E6;
+    transform: translateY(-2px);
+    box-shadow: 0 22px 40px -22px rgba(14,14,14,0.18);
+  }
+  .product-card .product-img {
+    transition: transform .8s var(--ease);
+  }
+  .product-card:hover .product-img { transform: scale(1.04); }
+
+  /* Round button */
+  .rb {
+    width: 40px; height: 40px;
+    border-radius: 999px;
+    display: grid; place-items: center;
+    border: 1px solid #D9D9D9;
+    background: transparent;
+    color: #0E0E0E;
+    transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .rb:hover { background: #0E0E0E; color: #fff; border-color: #0E0E0E; }
+  .rb.is-disabled { opacity: 0.35; pointer-events: none; }
+
+  /* CTA pill */
+  .cta-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 18px;
+    background: #FFFFFF; color: #0E0E0E;
+    font-weight: 500; font-size: 14px;
+    transition: background-color .25s var(--ease), color .25s var(--ease);
+  }
+  .cta-pill:hover { background: #0E0E0E; color: #FFFFFF; }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal], [data-reveal-stagger] > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+
+  /* Contact buttons (mobile primary actions) */
+  .contact-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 16px;
+    border-radius: var(--r-sm);
+    font-size: 14px; font-weight: 600;
+    transition: transform .15s var(--ease), background-color .2s var(--ease);
+    min-height: 48px;
+  }
+  .contact-btn:active { transform: translateY(1px) scale(0.99); }
+  .contact-btn-wa { background: #25D366; color: #FFFFFF; }
+  .contact-btn-wa:hover { background: #1EBE5B; }
+  .contact-btn-phone { background: #0A0A0A; color: #FFFFFF; }
+  .contact-btn-phone:hover { background: #1c1c1c; }
+
+  /* Trust pills (mobile hero bullets) */
+  .trust-pill {
+    display: flex; align-items: baseline; gap: 8px;
+    background: #FFFFFF;
+    border-radius: var(--r-sm);
+    padding: 12px 14px;
+    font-size: 12px; color: #6E6E73;
+  }
+  .trust-pill .num { color: #0A0A0A; font-weight: 600; font-size: 13px; }
+
+  /* ===================== MOBILE APP-STYLE OVERRIDES (LIGHT) ===================== */
+  @media (max-width: 767px) {
+    html, body { background: #F2F2F7; color: #0A0A0A; }
+    body { padding-bottom: 84px; } /* room for sticky bottom contact bar */
+
+    /* Tap targets are large; iOS-like spacing */
+    .app-card {
+      background: #FFFFFF;
+      border-radius: var(--r-md);
+      padding: 18px;
+    }
+    .app-card-row {
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .app-icon-tile {
+      flex: none;
+      width: 44px; height: 44px;
+      border-radius: var(--r-sm);
+      display: grid; place-items: center;
+      background: #F2F2F7;
+      color: #0A0A0A;
+    }
+    /* Bottom sticky contact bar */
+    .mobile-bottom-cta {
+      position: fixed; left: 0; right: 0; bottom: 0;
+      padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
+      background: linear-gradient(to top, #F2F2F7 70%, rgba(242,242,247,0));
+      z-index: 60;
+    }
+    .mobile-bottom-cta .bar {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .mobile-bottom-cta .bar a {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 16px;
+      border-radius: var(--r-sm);
+      font-weight: 600; font-size: 14px;
+      box-shadow: 0 12px 30px -10px rgba(10,10,10,0.18);
+      min-height: 48px;
+    }
+    .mobile-bottom-cta .bar a:active { transform: translateY(1px) scale(0.99); }
+
+    /* iOS-like status pad */
+    .app-status-pad {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    /* Apply app-style to existing sections on mobile */
+    section { padding-left: 16px !important; padding-right: 16px !important; }
+    section[id="products"], section[id="briefing"], section[id="engineers"] { padding-top: 36px !important; padding-bottom: 24px !important; }
+    section[id="contact"] { padding-bottom: 24px !important; }
+
+    /* Featured products → vertical list of app cards */
+    #featuredCarousel {
+      display: flex !important;
+      flex-direction: column !important;
+      grid-auto-flow: unset !important;
+      grid-auto-columns: unset !important;
+      gap: 12px !important;
+      overflow: visible !important;
+      scroll-snap-type: none !important;
+    }
+    #featuredCarousel > .product-card {
+      aspect-ratio: auto !important;
+      background: #FFFFFF !important;
+      border-radius: 22px !important;
+      padding: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      min-height: 92px;
+    }
+    #featuredCarousel > .product-card > div:first-child {
+      position: static !important;
+      width: 64px; height: 64px;
+      padding: 0 !important;
+      background: #F2F2F7;
+      border-radius: var(--r-md);
+      display: grid !important;
+      place-items: center !important;
+      flex: none;
+      overflow: hidden;
+    }
+    #featuredCarousel > .product-card .product-img {
+      max-height: 100% !important;
+      max-width: 100% !important;
+      width: 100%; height: 100%;
+      object-fit: cover !important;
+      border-radius: 0 !important;
+    }
+    #featuredCarousel > .product-card > div:last-child {
+      position: static !important;
+      padding: 0 !important;
+      flex: 1;
+    }
+    #featuredCarousel > .product-card > div:last-child > div:first-child > div:first-child {
+      color: #0A0A0A !important;
+      font-size: 16px !important;
+    }
+    #featuredCarousel > .product-card > div:last-child > div:first-child > div:last-child {
+      color: #8E8E93 !important;
+    }
+    #featuredCarousel > .product-card > div:last-child > button {
+      color: #C7C7CC !important;
+    }
+    #featuredCarousel > .product-card:hover { background: #FAFAFC !important; }
+
+    /* Hide the featured-products arrows on mobile (we use vertical list there) */
+    [data-carousel-prev="featuredCarousel"], [data-carousel-next="featuredCarousel"] { display: none !important; }
+
+    /* Process carousel dots */
+    .dot {
+      width: 6px; height: 6px; border-radius: 999px;
+      background: #C7C7CC;
+      transition: width .3s var(--ease), background-color .3s var(--ease);
+    }
+    .dot.is-active { width: 22px; background: #0A0A0A; }
+
+    /* Surface backgrounds → light card */
+    .bg-surface { background: #FFFFFF !important; color: #0A0A0A !important; }
+    .bg-surface .text-ash, .bg-surface .text-ink\/70 { color: #8E8E93 !important; }
+
+    /* Industries cards on mobile */
+    section#engineers article { background: #FFFFFF !important; aspect-ratio: auto !important; min-height: 0 !important; padding: 18px !important; border-radius: 22px !important; }
+    section#engineers article h3 { font-size: 18px !important; color: #0A0A0A !important; }
+    section#engineers article p { color: #8E8E93 !important; font-size: 13px !important; }
+    section#engineers article > div:first-child { color: #8E8E93 !important; font-size: 11px !important; }
+    section#engineers .grid { gap: 12px !important; }
+
+    /* Stats strip → list rows */
+    section#profile { border: 0 !important; padding: 0 16px !important; }
+    section#profile > div { display: flex !important; flex-direction: column !important; gap: 10px; padding: 8px 0 !important; }
+    section#profile > div > div {
+      background: #FFFFFF !important; border-radius: 22px;
+      padding: 18px 20px !important;
+      border: 0 !important;
+      display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+    }
+    section#profile > div > div .display-md { font-size: 32px !important; color: #0A0A0A !important; }
+    section#profile > div > div .text-ash { color: #8E8E93 !important; }
+
+    /* Briefing block — light editorial */
+    section#briefing h2 { color: #0A0A0A !important; font-size: 36px !important; line-height: 1.05 !important; }
+    section#briefing p { color: #6E6E73 !important; }
+    section#briefing .text-ash { color: #8E8E93 !important; }
+    section#briefing a { color: #0A0A0A !important; border-color: #0A0A0A !important; }
+
+    /* Section section-heading color */
+    section h2.display-md { color: #0A0A0A !important; }
+    section h2.display-md sup { color: #8E8E93 !important; }
+
+    /* Contact block — keep dark CTA in light theme as accent */
+    section#contact > div > div {
+      padding: 28px 22px !important; border-radius: var(--r-lg) !important;
+    }
+    section#contact h2 { font-size: 32px !important; line-height: 1.05 !important; }
+
+    /* === Manufacturing process → horizontal swipe carousel on mobile === */
+    #processCarousel {
+      display: flex !important;
+      flex-direction: row !important;
+      grid-template-columns: none !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      margin: 0 -16px !important;
+      padding: 0 16px;
+      scrollbar-width: none;
+      scroll-padding-left: 16px;
+    }
+    #processCarousel::-webkit-scrollbar { display: none; }
+    section#process article {
+      flex: 0 0 82% !important;
+      min-width: 82%;
+      scroll-snap-align: start;
+      background: #F4F4F6;
+      border-radius: var(--r-md);
+      padding: 22px 22px 26px !important;
+      display: flex; flex-direction: column;
+    }
+    section#process article p[class*="text-[88px]"] {
+      font-size: 56px !important;
+      margin-bottom: 14px !important;
+      line-height: 0.9 !important;
+    }
+    section#process article > div:first-child {
+      margin-bottom: 16px !important;
+    }
+    /* Reduce Manufacturing process top spacing and add swipe hint */
+    section#process > div > div:first-child {
+      margin-bottom: 24px !important;
+      padding-bottom: 14px !important;
+      position: relative;
+    }
+    section#process > div > div:first-child > span { display: none !important; }
+    section#process > div > div:first-child::after {
+      content: "Swipe →";
+      position: absolute; right: 0; bottom: 18px;
+      font-size: 11px; color: #8E8E93;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    /* Footer */
+    footer { padding-bottom: 120px !important; background: #F2F2F7 !important; color: #8E8E93 !important; }
+    footer .text-ink { color: #0A0A0A !important; }
+    footer a { color: #6E6E73 !important; }
+    footer a:hover { color: #0A0A0A !important; }
+    footer .border-t { border-color: #E5E5EA !important; }
+
+    /* Small headings size */
+    section#products h2.display-md, section#engineers h2.display-md { font-size: 26px !important; }
+
+    /* Stats strip dividers */
+    section.border-y { border-color: #E5E5EA !important; }
+    section.border-y .divide-x > * { border-color: transparent !important; }
+
+    /* ===== Mobile fullscreen menu ===== */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 80;
+      background: #FFFFFF;
+      transform: translateY(100%);
+      transition: transform .35s cubic-bezier(0.32, 0.72, 0, 1);
+      overflow-y: auto;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .mobile-menu.is-open { transform: translateY(0); }
+    .mobile-menu-inner { min-height: 100%; display: flex; flex-direction: column; }
+    body.menu-locked { overflow: hidden; touch-action: none; }
+
+    .menu-row {
+      display: grid; grid-template-columns: 32px 1fr 24px;
+      align-items: center; gap: 16px;
+      padding: 22px 0;
+      min-height: 56px;
+    }
+    .menu-num {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px; color: #8E8E93;
+      letter-spacing: 0;
+    }
+    .menu-label {
+      font-size: 26px; font-weight: 600;
+      letter-spacing: -0.025em; line-height: 1;
+      color: #0A0A0A;
+    }
+    .menu-arrow { color: #C7C7CC; font-size: 18px; text-align: right; }
+    .menu-row:active .menu-label { color: #6E6E73; }
+
+    .menu-cta {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 18px 22px;
+      background: #0A0A0A; color: #FFFFFF;
+      border-radius: 999px;
+      font-weight: 600; font-size: 15px;
+      box-shadow: 0 12px 30px -10px rgba(10,10,10,0.18);
+    }
+    .menu-cta:active { transform: translateY(1px); }
+
+    /* ===== Specs table → horizontal swipe carousel on mobile ===== */
+    .specs-table { display: none !important; }
+    .specs-mobile {
+      display: flex !important;
+      flex-direction: row !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      margin: 0 -16px;
+      padding: 0 16px 4px;
+      scrollbar-width: none;
+    }
+    .specs-mobile::-webkit-scrollbar { display: none; }
+    .specs-card {
+      background: #F4F4F6;
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      margin-bottom: 0;
+      flex: 0 0 82%;
+      min-width: 82%;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+    }
+    .specs-card-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #E5E5EA;
+      margin-bottom: 14px;
+    }
+    .specs-card-name {
+      font-size: 18px; font-weight: 600;
+      letter-spacing: -0.015em;
+      color: #0A0A0A;
+    }
+    .specs-card-id {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11px; color: #8E8E93;
+      text-transform: uppercase; letter-spacing: 0.18em;
+    }
+    .specs-card-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 7px 0;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 13px;
+    }
+    .specs-card-row .k { color: #8E8E93; text-transform: uppercase; letter-spacing: 0.12em; font-size: 11px; }
+    .specs-card-row .v { color: #0A0A0A; }
+    .specs-card-row.primary .v { font-weight: 600; }
+  }
+  /* Show desktop specs table only when wider than mobile */
+  @media (min-width: 768px) {
+    .specs-mobile { display: none !important; }
+  }
+</style>
+</head>
+
+<body class="antialiased" id="top">
+
+
+<a href="#products" class="skip-link">Skip to products</a>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- Sticky desktop nav (revealed on scroll-up) -->
+<header class="nav-sticky hidden md:block px-10 py-4">
+  <div class="mx-auto max-w-[1480px] flex items-center justify-between text-[13px]">
+    <div class="flex items-center gap-8">
+      <a href="#top" aria-label="Magics — back to top" class="font-semibold tracking-tight text-[15px]">Magics<sup class="text-[9px] font-medium align-super">°</sup></a>
+      <nav class="flex items-center gap-7">
+        <a href="#products" class="nav-link">Catalogue</a>
+        <a href="#specs" class="nav-link">Pricing</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#certs" class="nav-link">Certifications</a>
+        <a href="#operations" class="nav-link">Shipping</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+    </div>
+    <nav class="flex items-center gap-5">
+      <a href="tel:+995320000000" class="nav-link num">+995 32 000 0000</a>
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill magnetic" style="background:#25D366;color:#fff;padding:8px 14px;font-size:13px">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========================= MOBILE FULLSCREEN MENU (md:hidden) ========================= -->
+<div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true" role="dialog" aria-label="Site navigation">
+  <div class="mobile-menu-inner">
+    <header class="px-5 pt-4 pb-3 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-[16px] text-[#0A0A0A]">Magics<sup class="text-[10px] font-medium align-super">°</sup></span>
+      <button aria-label="Close menu" data-menu-close class="grid place-items-center h-11 w-11 rounded-full bg-[#F2F2F7]" type="button">
+        <svg class="h-4 w-4 text-[#0A0A0A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <nav class="px-5 pt-6">
+      <ul class="divide-y divide-[#E5E5EA]">
+        <li><a href="#products" data-menu-link class="menu-row"><span class="menu-num">01</span><span class="menu-label">Catalogue</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#specs" data-menu-link class="menu-row"><span class="menu-num">02</span><span class="menu-label">Specs &amp; pricing</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#process" data-menu-link class="menu-row"><span class="menu-num">03</span><span class="menu-label">Process</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#certs" data-menu-link class="menu-row"><span class="menu-num">04</span><span class="menu-label">Certifications</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#operations" data-menu-link class="menu-row"><span class="menu-num">05</span><span class="menu-label">Shipping</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#faq" data-menu-link class="menu-row"><span class="menu-num">06</span><span class="menu-label">FAQ</span><span class="menu-arrow">↗</span></a></li>
+        <li><a href="#contact" data-menu-link class="menu-row"><span class="menu-num">07</span><span class="menu-label">Contact</span><span class="menu-arrow">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="mt-auto p-5 border-t border-[#E5E5EA] space-y-2">
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="menu-cta" style="background:#25D366;color:#fff">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+        Message on WhatsApp
+      </a>
+      <a href="tel:+995320000000" class="menu-cta">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        +995 32 000 0000
+      </a>
+      <div class="mt-4 flex items-center justify-between text-[11px] text-[#8E8E93]">
+        <span>Tbilisi, Georgia</span>
+        <a href="mailto:sales@magicstbilisi.ge" class="text-[#0A0A0A]">sales@magicstbilisi.ge</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================= MOBILE CINEMATIC HERO (md:hidden) ========================= -->
+<section class="md:hidden relative overflow-hidden" aria-label="Welcome" style="height: 100dvh; min-height: 620px; max-height: 820px;">
+  <!-- Background photo, full bleed -->
+  <img
+    src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1400&q=85"
+    alt="Wooden cable reel on the production floor"
+    class="hero-parallax absolute inset-0 h-full w-full object-cover scale-105"
+    loading="eager"
+  />
+  <!-- Gradient overlay (dark top + dark bottom for legibility) -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/15" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-black/85 via-black/40 to-transparent" aria-hidden="true"></div>
+
+  <!-- Top bar (over photo) -->
+  <header class="relative z-20 app-status-pad px-5 pt-4 pb-2 flex items-center justify-between">
+    <a href="#top" aria-label="Magics — back to top" class="font-semibold tracking-tight text-[16px] text-white">Magics<sup class="text-[10px] font-medium align-super">°</sup></a>
+    <button aria-label="Open menu" data-menu-open class="grid place-items-center h-11 w-11 rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/20" type="button">
+      <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 17h16"/></svg>
+    </button>
+  </header>
+
+  <!-- Hero text + CTA, anchored to bottom -->
+  <div class="absolute inset-x-0 bottom-0 z-10 px-5 pb-7" style="padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.75rem);">
+    <div class="text-[11px] uppercase tracking-[0.18em] text-white/75 mb-4">Made in Tbilisi · since 2014</div>
+    <h1 class="display text-white text-[34px] leading-[1.05]">
+      Wooden cable reels,<br/>
+      straight from<br/>
+      our factory floor
+    </h1>
+    <p class="mt-4 text-white/80 text-[14px] leading-relaxed max-w-[40ch]">
+      Birch plywood reels Ø600–3000&nbsp;mm for cable manufacturers across the EU, UK &amp; US.
+    </p>
+    <div class="mt-6 grid grid-cols-2 gap-2">
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" class="contact-btn contact-btn-wa" target="_blank" rel="noopener">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+        WhatsApp
+      </a>
+      <a href="tel:+995320000000" class="contact-btn" style="background:rgba(255,255,255,0.14);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.22)">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+    </div>
+    <a href="#products" class="mt-5 flex items-center justify-center gap-2 text-[12px] text-white/75 uppercase tracking-[0.15em]">
+      Catalogue ↓
+    </a>
+  </div>
+</section>
+
+<!-- ========================= MOBILE TRUST STRIP (after hero) ========================= -->
+<div class="md:hidden px-4 pt-5">
+  <div class="grid grid-cols-2 gap-2">
+    <div class="trust-pill"><span class="num">12+</span><span>years experience</span></div>
+    <div class="trust-pill"><span class="num">3K+</span><span>reels / month</span></div>
+    <div class="trust-pill"><span class="num">14</span><span>export markets</span></div>
+    <div class="trust-pill"><span class="num">FSC</span><span>+ ISO 9001</span></div>
+  </div>
+</div>
+
+<!-- ========================= DESKTOP HERO (hidden on mobile) ========================= -->
+<section class="hidden md:block relative">
+  <!-- Top nav (overlaid) -->
+  <header class="absolute inset-x-0 top-0 z-30 px-6 md:px-10 py-6 flex items-center justify-between text-[13px] text-white">
+    <div class="flex items-center gap-8 md:gap-10">
+      <a href="#top" aria-label="Magics — back to top" class="font-semibold tracking-tight text-[15px]">Magics<sup class="text-[9px] font-medium align-super">°</sup></a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#products" class="nav-link">Catalogue</a>
+        <a href="#specs" class="nav-link">Pricing</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#certs" class="nav-link">Certifications</a>
+        <a href="#operations" class="nav-link">Shipping</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+    </div>
+    <nav class="hidden md:flex items-center gap-5">
+      <a href="tel:+995320000000" class="nav-link num">+995 32 000 0000</a>
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#fff;padding:8px 14px;font-size:13px">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <!-- Split hero -->
+  <div class="grid grid-cols-1 md:grid-cols-2 h-[640px] md:h-[760px]">
+    <!-- Left: sharp photo -->
+    <div class="relative overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1600&q=80"
+        alt="Close-up of a wooden cable reel"
+        class="hero-parallax absolute inset-0 h-full w-full object-cover scale-110"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Right: blurred + text overlay -->
+    <div class="relative overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1600&q=80"
+        alt=""
+        aria-hidden="true"
+        class="hero-blur absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/10"></div>
+
+      <div class="relative h-full flex flex-col justify-center px-8 md:px-14 lg:px-20 max-w-[680px]">
+        <div class="text-[12px] text-white/70 mb-4 uppercase tracking-[0.18em]">Made in Tbilisi · since 2014</div>
+        <h1 class="display text-white text-[40px] md:text-[54px] lg:text-[60px]">
+          Wooden cable reels,<br/>
+          straight from<br/>
+          our factory floor
+        </h1>
+        <p class="mt-5 text-white/85 text-[15px] md:text-[16px] max-w-[520px] leading-relaxed">
+          Birch plywood reels and drums Ø600–3000&nbsp;mm for cable manufacturers, telecom and fiber operators across the EU, UK and US. In-house CNC, palletised dispatch from Poti.
+        </p>
+        <div class="mt-8 flex items-center gap-3 flex-wrap">
+          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#fff">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+            WhatsApp
+          </a>
+          <a href="tel:+995320000000" class="cta-pill">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            +995 32 000 0000
+          </a>
+          <a href="#specs" class="text-[13px] text-white/85 underline-offset-4 hover:underline">Specs &amp; pricing ↓</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= KINETIC MARQUEE — key facts ========================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="num">12+</span> years in production</span>
+    <span class="marquee-item">Birch plywood · <span class="num">8–10%</span> moisture</span>
+    <span class="marquee-item">CNC ±<span class="num">0.4</span> mm</span>
+    <span class="marquee-item">Ø <span class="num">600 — 3000</span> mm</span>
+    <span class="marquee-item"><span class="num">3,000+</span> reels / month</span>
+    <span class="marquee-item">Shipped EU · UK · US</span>
+    <span class="marquee-item">FSC<sup>®</sup> · ISO <span class="num">9001</span></span>
+    <span class="marquee-item">Poti · Batumi · Black Sea</span>
+    <span class="marquee-item">Quote in <span class="num">24</span> h</span>
+    <!-- Duplicate for seamless scroll -->
+    <span class="marquee-item"><span class="num">12+</span> years in production</span>
+    <span class="marquee-item">Birch plywood · <span class="num">8–10%</span> moisture</span>
+    <span class="marquee-item">CNC ±<span class="num">0.4</span> mm</span>
+    <span class="marquee-item">Ø <span class="num">600 — 3000</span> mm</span>
+    <span class="marquee-item"><span class="num">3,000+</span> reels / month</span>
+    <span class="marquee-item">Shipped EU · UK · US</span>
+    <span class="marquee-item">FSC<sup>®</sup> · ISO <span class="num">9001</span></span>
+    <span class="marquee-item">Poti · Batumi · Black Sea</span>
+    <span class="marquee-item">Quote in <span class="num">24</span> h</span>
+  </div>
+</div>
+
+<!-- ========================= FEATURED PRODUCTS ========================= -->
+<section id="products" class="px-6 md:px-10 py-20 md:py-28">
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-end justify-between gap-6 mb-12 md:mb-16" data-reveal>
+      <h2 class="display-md text-[34px] md:text-[44px]">
+        Reel catalogue
+      </h2>
+      <div class="flex items-center gap-3">
+        <button data-carousel-prev="featuredCarousel" class="rb" aria-label="Previous">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <button data-carousel-next="featuredCarousel" class="rb" aria-label="Next">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="featuredCarousel" class="h-snap grid grid-flow-col auto-cols-[88%] sm:auto-cols-[48%] lg:auto-cols-[32.6%] gap-5 overflow-x-auto pb-2" data-reveal-stagger>
+      <!-- Card 1 -->
+      <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
+        <div class="absolute inset-0 grid place-items-center p-12">
+          <img src="https://images.unsplash.com/photo-1758965364875-e090e5423d2d?auto=format&fit=crop&w=900&q=80" alt="HV-3000 wooden cable reel — Sergej Karpow / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
+          <div>
+            <div class="text-[15px] font-medium tracking-tight">HV-3000 Reel</div>
+            <div class="mt-1 text-[12px] text-ash">Power series · Ø3000&nbsp;mm</div>
+          </div>
+          <span class="text-ink/40" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
+        <div class="absolute inset-0 grid place-items-center p-12">
+          <img src="https://images.unsplash.com/photo-1562003190-30e1cab33289?auto=format&fit=crop&w=900&q=80" alt="TLC-800 telecom drum — Bence Balla-Schottner / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
+          <div>
+            <div class="text-[15px] font-medium tracking-tight">TLC-800 Drum</div>
+            <div class="mt-1 text-[12px] text-ash">Telecom series · Ø800&nbsp;mm</div>
+          </div>
+          <span class="text-ink/40" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
+        <div class="absolute inset-0 grid place-items-center p-12">
+          <img src="https://images.unsplash.com/photo-1770117663307-a76e820df814?auto=format&fit=crop&w=900&q=80" alt="FBR-500 fiber-optic spool — Jonathan Cosens / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
+          <div>
+            <div class="text-[15px] font-medium tracking-tight">FBR-500 Spool</div>
+            <div class="mt-1 text-[12px] text-ash">Fiber optic · Ø500&nbsp;mm</div>
+          </div>
+          <span class="text-ink/40" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
+        <div class="absolute inset-0 grid place-items-center p-12">
+          <img src="https://images.unsplash.com/photo-1776278515712-9d5753884f5f?auto=format&fit=crop&w=900&q=80" alt="FLG-1500 birch plywood flange — Compagnons / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
+          <div>
+            <div class="text-[15px] font-medium tracking-tight">FLG-1500 Flange</div>
+            <div class="mt-1 text-[12px] text-ash">Components · 18&nbsp;mm flange</div>
+          </div>
+          <span class="text-ink/40" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 5 -->
+      <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
+        <div class="absolute inset-0 grid place-items-center p-12">
+          <img src="https://images.unsplash.com/photo-1774380603683-c5634902a5bc?auto=format&fit=crop&w=900&q=80" alt="MED-1200 medium-voltage drum — Peter Hoogmoed / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
+          <div>
+            <div class="text-[15px] font-medium tracking-tight">MED-1200 Drum</div>
+            <div class="mt-1 text-[12px] text-ash">Medium voltage · Ø1200&nbsp;mm</div>
+          </div>
+          <span class="text-ink/40" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= MANUFACTURING PROCESS ========================= -->
+<section id="process" class="bg-white text-ink px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-baseline justify-between mb-16 md:mb-24 pb-6 border-b border-line">
+      <h2 class="display-md text-[28px] md:text-[44px]">Manufacturing process</h2>
+      <span class="hidden md:inline text-[11px] uppercase tracking-[0.18em] text-ash">Tbilisi · since 2014</span>
+    </div>
+
+    <div id="processCarousel" class="grid grid-cols-1 md:grid-cols-4 md:divide-x md:divide-line" data-reveal-stagger>
+      <article class="px-0 md:px-8 py-8 md:py-0">
+        <div class="flex items-center gap-3 mb-8 md:mb-10">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Intake</span>
+        </div>
+        <p class="text-[88px] md:text-[110px] leading-none font-extralight tracking-[-0.04em] mb-8 md:mb-12">1</p>
+        <h3 class="text-base md:text-lg font-medium mb-3 tracking-tight">Material intake</h3>
+        <p class="text-[13px] text-ash leading-relaxed max-w-[32ch]">
+          Kiln-dried Caucasian birch arrives in graded bundles. Moisture verified at 8–10% before stock is released. Steel hardware bench-tested for tensile compliance.
+        </p>
+      </article>
+
+      <article class="px-0 md:px-8 py-8 md:py-0">
+        <div class="flex items-center gap-3 mb-8 md:mb-10">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Cutting</span>
+        </div>
+        <p class="text-[88px] md:text-[110px] leading-none font-extralight tracking-[-0.04em] mb-8 md:mb-12">2</p>
+        <h3 class="text-base md:text-lg font-medium mb-3 tracking-tight">CNC milling</h3>
+        <p class="text-[13px] text-ash leading-relaxed max-w-[32ch]">
+          Flanges and barrels routed on five-axis Italian CNC beds at ±0.4&nbsp;mm tolerance. Bores and ventilation slots cut in a single pass.
+        </p>
+      </article>
+
+      <article class="px-0 md:px-8 py-8 md:py-0">
+        <div class="flex items-center gap-3 mb-8 md:mb-10">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Finish</span>
+        </div>
+        <p class="text-[88px] md:text-[110px] leading-none font-extralight tracking-[-0.04em] mb-8 md:mb-12">3</p>
+        <h3 class="text-base md:text-lg font-medium mb-3 tracking-tight">Sanding &amp; QC</h3>
+        <p class="text-[13px] text-ash leading-relaxed max-w-[32ch]">
+          Each flange hand-sanded through three grits before assembly. Reels load-tested under simulated drum weight against a 22-point checklist.
+        </p>
+      </article>
+
+      <article class="px-0 md:px-8 py-8 md:py-0">
+        <div class="flex items-center gap-3 mb-8 md:mb-10">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Dispatch</span>
+        </div>
+        <p class="text-[88px] md:text-[110px] leading-none font-extralight tracking-[-0.04em] mb-8 md:mb-12">4</p>
+        <h3 class="text-base md:text-lg font-medium mb-3 tracking-tight">Palletised dispatch</h3>
+        <p class="text-[13px] text-ash leading-relaxed max-w-[32ch]">
+          Stacked on heat-treated EUR pallets, banded and tagged with a QR traceability code. Trucks leave Tbilisi twice weekly for Poti, Batumi and Baku.
+        </p>
+      </article>
+    </div>
+
+    <!-- Mobile carousel controls (hidden on desktop) -->
+    <div class="md:hidden mt-6 flex items-center justify-between">
+      <div id="processDots" class="flex items-center gap-1.5">
+        <span class="dot is-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-carousel-prev="processCarousel" class="rb" aria-label="Previous step">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <button data-carousel-next="processCarousel" class="rb" aria-label="Next step">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= SPECIFICATIONS ========================= -->
+<section id="specs" class="bg-white text-ink px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="grid grid-cols-12 gap-6 lg:gap-8 items-end mb-12 md:mb-20 pb-6 border-b border-line">
+      <div class="col-span-12 md:col-span-7">
+        <span class="text-[11px] uppercase tracking-[0.18em] text-ash mb-4 md:mb-6 block">Specs &amp; pricing</span>
+        <h2 class="display-md text-[28px] md:text-[44px] max-w-[18ch]">Six standard formats, <span class="text-ash">plus custom on request.</span></h2>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9">
+        <p class="text-[13px] text-ash leading-relaxed max-w-[42ch]">
+          Dimensions per EN&nbsp;13388. Indicative prices apply from 20 units, FCA Tbilisi. Exact quote against your volume and Incoterm — within 24&nbsp;hours.
+        </p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto specs-table">
+      <table class="w-full min-w-[860px] text-left">
+        <thead>
+          <tr class="text-[11px] uppercase tracking-[0.18em] text-ash">
+            <th class="font-normal w-[14%]">Model</th>
+            <th class="font-normal w-[12%] num">Diameter</th>
+            <th class="font-normal w-[10%] num">Flange</th>
+            <th class="font-normal w-[10%] num">Barrel</th>
+            <th class="font-normal w-[14%] num">Load capacity</th>
+            <th class="font-normal w-[12%] num">Empty weight</th>
+            <th class="font-normal w-[14%] num">Price from</th>
+            <th class="font-normal w-[14%]"></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-line">
+          <tr><td class="font-medium tracking-tight">TLC-600</td><td class="text-ash num">Ø 600 mm</td><td class="text-ash num">12 mm</td><td class="text-ash num">250 mm</td><td class="num">180 kg</td><td class="text-ash num">14 kg</td><td class="num">$48</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20TLC-600,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+          <tr><td class="font-medium tracking-tight">TLC-800</td><td class="text-ash num">Ø 800 mm</td><td class="text-ash num">15 mm</td><td class="text-ash num">350 mm</td><td class="num">320 kg</td><td class="text-ash num">22 kg</td><td class="num">$72</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20TLC-800,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+          <tr><td class="font-medium tracking-tight">MED-1200</td><td class="text-ash num">Ø 1200 mm</td><td class="text-ash num">18 mm</td><td class="text-ash num">600 mm</td><td class="num">850 kg</td><td class="text-ash num">48 kg</td><td class="num">$165</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20MED-1200,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+          <tr><td class="font-medium tracking-tight">HV-1800</td><td class="text-ash num">Ø 1800 mm</td><td class="text-ash num">21 mm</td><td class="text-ash num">900 mm</td><td class="num">1,750 kg</td><td class="text-ash num">95 kg</td><td class="num">$340</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-1800,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+          <tr><td class="font-medium tracking-tight">HV-2400</td><td class="text-ash num">Ø 2400 mm</td><td class="text-ash num">24 mm</td><td class="text-ash num">1,200 mm</td><td class="num">2,900 kg</td><td class="text-ash num">165 kg</td><td class="num">$580</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-2400,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+          <tr><td class="font-medium tracking-tight">HV-3000</td><td class="text-ash num">Ø 3000 mm</td><td class="text-ash num">24 mm</td><td class="text-ash num">1,500 mm</td><td class="num">4,200 kg</td><td class="text-ash num">240 kg</td><td class="num">$890</td><td><a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-3000,%20qty:%20" target="_blank" rel="noopener" class="quote-btn">Request quote →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile-only: spec cards as swipe carousel -->
+    <div class="specs-mobile" id="specsCarousel">
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">TLC-600</span><span class="specs-card-id">Telecom</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 600 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">12 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">250 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">180 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">14 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$48</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20TLC-600,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">TLC-800</span><span class="specs-card-id">Telecom</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 800 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">15 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">350 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">320 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">22 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$72</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20TLC-800,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">MED-1200</span><span class="specs-card-id">Medium voltage</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 1200 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">18 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">600 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">850 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">48 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$165</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20MED-1200,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">HV-1800</span><span class="specs-card-id">High voltage</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 1800 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">21 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">900 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">1,750 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">95 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$340</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-1800,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">HV-2400</span><span class="specs-card-id">High voltage</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 2400 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">24 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">1,200 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">2,900 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">165 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$580</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-2400,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+      <div class="specs-card">
+        <div class="specs-card-head"><span class="specs-card-name">HV-3000</span><span class="specs-card-id">High voltage</span></div>
+        <div class="specs-card-row"><span class="k">Diameter</span><span class="v">Ø 3000 mm</span></div>
+        <div class="specs-card-row"><span class="k">Flange</span><span class="v">24 mm</span></div>
+        <div class="specs-card-row"><span class="k">Barrel</span><span class="v">1,500 mm</span></div>
+        <div class="specs-card-row primary"><span class="k">Load capacity</span><span class="v">4,200 kg</span></div>
+        <div class="specs-card-row"><span class="k">Empty weight</span><span class="v">240 kg</span></div>
+        <div class="specs-card-row primary"><span class="k">Price from</span><span class="v">$890</span></div>
+        <a href="https://wa.me/995320000000?text=Hi,%20need%20a%20quote%20for%20HV-3000,%20qty:%20" target="_blank" rel="noopener" class="specs-card-cta">Quote on WhatsApp →</a>
+      </div>
+    </div>
+
+    <!-- Mobile carousel controls -->
+    <div class="md:hidden mt-5 flex items-center justify-between">
+      <div id="specsDots" class="flex items-center gap-1.5">
+        <span class="dot is-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-carousel-prev="specsCarousel" class="rb" aria-label="Previous model">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <button data-carousel-next="specsCarousel" class="rb" aria-label="Next model">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <p class="text-[12px] text-ash mt-8 md:mt-10 max-w-2xl leading-relaxed">
+      <span class="text-ink">Custom builds:</span> diameters from Ø&nbsp;450&nbsp;mm up to Ø&nbsp;3,600&nbsp;mm, four working weeks lead time. Send DXF/PDF drawings to <a href="mailto:sales@magicstbilisi.ge" class="text-ink underline-offset-4 hover:underline">sales@magicstbilisi.ge</a> or via WhatsApp.
+    </p>
+  </div>
+</section>
+
+<!-- ========================= OPERATIONS ========================= -->
+<section id="operations" class="border-t border-line bg-white px-6 md:px-10 pb-24 md:pb-32 pt-20 md:pt-28" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-baseline justify-between mb-12 md:mb-20">
+      <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Operations &amp; logistics</span>
+      <span class="num text-[11px] text-ash">3 sites</span>
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center">
+      <div class="col-span-12 lg:col-span-5 order-2 lg:order-1">
+        <div class="aspect-[4/5] w-full flex items-center justify-center">
+          <svg viewBox="0 0 400 500" class="w-full h-full max-w-[360px]" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Supply route map: Tbilisi to Batumi to Poti">
+            <path d="M 90 110 Q 220 200 130 280" stroke="#0E0E0E" stroke-width="1" fill="none"/>
+            <path d="M 130 280 Q 60 360 300 410" stroke="#1E40FF" stroke-width="1" fill="none"/>
+            <circle cx="90" cy="110" r="4" fill="#0E0E0E"/>
+            <circle cx="90" cy="110" r="14" stroke="#0E0E0E" stroke-width="0.5" fill="none"/>
+            <circle cx="130" cy="280" r="4" fill="#0E0E0E"/>
+            <circle cx="130" cy="280" r="14" stroke="#0E0E0E" stroke-width="0.5" fill="none"/>
+            <circle cx="300" cy="410" r="4" fill="#1E40FF"/>
+            <circle cx="300" cy="410" r="14" stroke="#1E40FF" stroke-width="0.5" fill="none"/>
+            <text x="110" y="105" class="num" font-size="9" fill="#6E6E73" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace">TBILISI</text>
+            <text x="150" y="275" class="num" font-size="9" fill="#6E6E73" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace">BATUMI</text>
+            <text x="320" y="405" class="num" font-size="9" fill="#1E40FF" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace">POTI · EXPORT</text>
+            <line x1="40" y1="460" x2="360" y2="460" stroke="#E2E2E2" stroke-width="0.5"/>
+            <text x="40" y="478" class="num" font-size="8" fill="#6E6E73" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace">SUPPLY ROUTE — 2026</text>
+            <text x="290" y="478" class="num" font-size="8" fill="#6E6E73" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace">FIG. 01</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="col-span-12 lg:col-span-7 order-1 lg:order-2">
+        <h2 class="display text-[34px] md:text-[56px] mb-3">Factory in Tbilisi.<br/>Export via Poti.</h2>
+        <p class="text-ash text-[14px] md:text-[16px] max-w-md mb-10 md:mb-16">Sea freight to EU and US via Black Sea, truck across the CIS via Verkhny Lars. Two dispatches per week, customs paperwork handled in-house.</p>
+
+        <div class="hidden md:grid grid-cols-12 gap-4 pb-4 border-b border-line text-[11px] uppercase tracking-[0.18em] text-ash">
+          <div class="col-span-1 num">No.</div>
+          <div class="col-span-7">Location</div>
+          <div class="col-span-3 text-right num">Coordinates</div>
+          <div class="col-span-1 text-right">↗</div>
+        </div>
+        <div class="md:hidden border-t border-line"></div>
+
+        <ul class="divide-y divide-line">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=41.7,44.8" target="_blank" rel="noopener noreferrer" aria-label="Open Tbilisi factory in Google Maps" class="block py-7 md:py-9 group">
+              <!-- Mobile -->
+              <div class="md:hidden">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="num text-ash text-[12px]">01</span>
+                  <span class="num text-ash text-[12px]">41.7°N 44.8°E</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-3">
+                  <div class="display-md text-[26px]">Tbilisi</div>
+                  <span class="text-ink group-hover:text-[#1E40FF] transition-colors">↗</span>
+                </div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Factory · 14 Sairme St · since 2014</div>
+              </div>
+              <!-- Desktop -->
+              <div class="hidden md:grid grid-cols-12 gap-4 items-baseline">
+                <div class="col-span-1 num text-ash text-[13px]">01</div>
+                <div class="col-span-7">
+                  <div class="display-md text-[36px]">Tbilisi</div>
+                  <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Factory · 14 Sairme St · since 2014</div>
+                </div>
+                <div class="col-span-3 text-right num text-ash text-[13px]">41.7°N 44.8°E</div>
+                <div class="col-span-1 text-right text-ink group-hover:text-[#1E40FF] transition-colors">↗</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=42.1,41.7" target="_blank" rel="noopener noreferrer" aria-label="Open Poti sea port in Google Maps" class="block py-7 md:py-9 group">
+              <div class="md:hidden">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="num text-ash text-[12px]">02</span>
+                  <span class="num text-ash text-[12px]">42.1°N 41.7°E</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-3">
+                  <div class="display-md text-[26px]">Poti <sup class="sup-num text-[#1E40FF]">EXPORT</sup></div>
+                  <span class="text-ink group-hover:text-[#1E40FF] transition-colors">↗</span>
+                </div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Sea port · Terminal 3</div>
+              </div>
+              <div class="hidden md:grid grid-cols-12 gap-4 items-baseline">
+                <div class="col-span-1 num text-ash text-[13px]">02</div>
+                <div class="col-span-7">
+                  <div class="display-md text-[36px]">Poti <sup class="sup-num text-[#1E40FF]">EXPORT</sup></div>
+                  <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Sea port · Terminal 3</div>
+                </div>
+                <div class="col-span-3 text-right num text-ash text-[13px]">42.1°N 41.7°E</div>
+                <div class="col-span-1 text-right text-ink group-hover:text-[#1E40FF] transition-colors">↗</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=41.6,41.6" target="_blank" rel="noopener noreferrer" aria-label="Open Batumi logistics hub in Google Maps" class="block py-7 md:py-9 group">
+              <div class="md:hidden">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="num text-ash text-[12px]">03</span>
+                  <span class="num text-ash text-[12px]">41.6°N 41.6°E</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-3">
+                  <div class="display-md text-[26px]">Batumi</div>
+                  <span class="text-ink group-hover:text-[#1E40FF] transition-colors">↗</span>
+                </div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Warehouse &amp; customs · Khelvachauri</div>
+              </div>
+              <div class="hidden md:grid grid-cols-12 gap-4 items-baseline">
+                <div class="col-span-1 num text-ash text-[13px]">03</div>
+                <div class="col-span-7">
+                  <div class="display-md text-[36px]">Batumi</div>
+                  <div class="text-[11px] uppercase tracking-[0.18em] text-ash mt-2">Warehouse &amp; customs · Khelvachauri</div>
+                </div>
+                <div class="col-span-3 text-right num text-ash text-[13px]">41.6°N 41.6°E</div>
+                <div class="col-span-1 text-right text-ink group-hover:text-[#1E40FF] transition-colors">↗</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+<section id="briefing" class="px-6 md:px-10 pb-24 md:pb-32">
+  <div class="mx-auto max-w-[1480px] grid grid-cols-12 gap-6 lg:gap-10 items-end" data-reveal>
+    <div class="col-span-12 lg:col-span-7">
+      <div class="text-[12px] uppercase tracking-[0.18em] text-ash mb-6">About</div>
+      <h2 class="display text-[40px] md:text-[60px] lg:text-[76px] max-w-[16ch]">
+        12&nbsp;years making reels. No middlemen.
+      </h2>
+    </div>
+    <div class="col-span-12 lg:col-span-5 lg:pl-6">
+      <p class="text-[15px] leading-[1.7] text-ink/75 max-w-[42ch]">
+        Our Tbilisi factory has been running since 2014. We make wooden cable reels and birch plywood drums on Italian CNC machinery, and we sell direct to cable manufacturers, telecom and fiber operators across the EU, UK, US and Caucasus. Material, production, QC and logistics — all under one roof.
+      </p>
+      <a href="https://wa.me/995320000000?text=Hello,%20tell%20me%20about%20your%20factory" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-3 text-[14px] font-medium border-b border-ink pb-1.5">
+        Ask on WhatsApp
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= STATS ========================= -->
+<section id="profile" class="border-y border-line">
+  <div class="mx-auto max-w-[1480px] grid grid-cols-2 md:grid-cols-4 divide-x divide-line">
+    <div class="px-6 md:px-10 py-10 md:py-14">
+      <div class="display-md text-[44px] md:text-[64px]"><span class="ticker" data-count="12" data-suffix="+">0</span></div>
+      <div class="mt-3 text-[12px] uppercase tracking-[0.18em] text-ash">years in business</div>
+    </div>
+    <div class="px-6 md:px-10 py-10 md:py-14">
+      <div class="display-md text-[44px] md:text-[64px]"><span class="ticker" data-count="80" data-suffix="+">0</span></div>
+      <div class="mt-3 text-[12px] uppercase tracking-[0.18em] text-ash">team on the floor</div>
+    </div>
+    <div class="px-6 md:px-10 py-10 md:py-14">
+      <div class="display-md text-[44px] md:text-[64px]"><span class="ticker" data-count="3" data-suffix="K+">0</span></div>
+      <div class="mt-3 text-[12px] uppercase tracking-[0.18em] text-ash">reels / month</div>
+    </div>
+    <div class="px-6 md:px-10 py-10 md:py-14">
+      <div class="display-md text-[44px] md:text-[64px]"><span class="ticker" data-count="14">0</span></div>
+      <div class="mt-3 text-[12px] uppercase tracking-[0.18em] text-ash">export markets</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= INDUSTRIES ========================= -->
+<section id="engineers" class="border-t border-line bg-white px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-baseline justify-between mb-12 md:mb-20">
+      <span class="text-[11px] uppercase tracking-[0.18em] text-ash">Who we work with</span>
+      <span class="num text-[11px] text-ash">4 verticals</span>
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 mb-12 md:mb-20">
+      <h2 class="col-span-12 lg:col-span-7 display text-[34px] md:text-[64px]">Industries we serve</h2>
+      <p class="col-span-12 lg:col-span-4 lg:col-start-9 text-ash text-[14px] md:text-[16px] self-end">Cable manufacturers, utility contractors, telecom operators and drum assemblers. One geometry per use case — calibrated to your wind tension and load.</p>
+    </div>
+
+    <div class="grid grid-cols-12 gap-4 pb-4 border-b border-line text-[11px] uppercase tracking-[0.18em] text-ash">
+      <div class="col-span-1 num">No.</div>
+      <div class="col-span-7 lg:col-span-8">Sector / application</div>
+      <div class="col-span-4 lg:col-span-3 text-right">Spec</div>
+    </div>
+
+    <ul class="divide-y divide-line">
+      <li class="grid grid-cols-12 gap-4 items-baseline py-8 md:py-12">
+        <div class="col-span-1 num text-ash text-[13px]">01</div>
+        <div class="col-span-7 lg:col-span-8">
+          <div class="display-md text-[24px] md:text-[44px]">Power transmission</div>
+          <div class="text-ash text-[13px] md:text-[15px] mt-2 md:mt-3 max-w-md">HV / MV reels for cable manufacturers and grid contractors.</div>
+        </div>
+        <div class="col-span-4 lg:col-span-3 text-right num text-ash text-[12px] md:text-[13px]">up to Ø 3000 mm</div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 items-baseline py-8 md:py-12">
+        <div class="col-span-1 num text-ash text-[13px]">02</div>
+        <div class="col-span-7 lg:col-span-8">
+          <div class="display-md text-[24px] md:text-[44px]">Telecom &amp; signal</div>
+          <div class="text-ash text-[13px] md:text-[15px] mt-2 md:mt-3 max-w-md">Mid-range drums for copper backbone networks and signalling.</div>
+        </div>
+        <div class="col-span-4 lg:col-span-3 text-right num text-ash text-[12px] md:text-[13px]">Ø 600 — 1200 mm</div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 items-baseline py-8 md:py-12">
+        <div class="col-span-1 num text-ash text-[13px]">03</div>
+        <div class="col-span-7 lg:col-span-8">
+          <div class="display-md text-[24px] md:text-[44px]">Fiber optic</div>
+          <div class="text-ash text-[13px] md:text-[15px] mt-2 md:mt-3 max-w-md">Lightweight precision spools for trunk and FTTx — bend-radius controlled.</div>
+        </div>
+        <div class="col-span-4 lg:col-span-3 text-right num text-ash text-[12px] md:text-[13px]">Ø 500 — 800 mm</div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 items-baseline py-8 md:py-12">
+        <div class="col-span-1 num text-ash text-[13px]">04</div>
+        <div class="col-span-7 lg:col-span-8">
+          <div class="display-md text-[24px] md:text-[44px]">Drum assemblers</div>
+          <div class="text-ash text-[13px] md:text-[15px] mt-2 md:mt-3 max-w-md">Birch flanges and components, kitted for partners running their own assembly line.</div>
+        </div>
+        <div class="col-span-4 lg:col-span-3 text-right num text-ash text-[12px] md:text-[13px]">12 — 24 mm flange</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= CERTIFICATIONS ========================= -->
+<section id="certs" class="border-t border-line bg-white px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-baseline justify-between mb-12 md:mb-16 pb-6 border-b border-line">
+      <h2 class="display-md text-[28px] md:text-[44px]">Certifications &amp; standards</h2>
+      <span class="hidden md:inline text-[11px] uppercase tracking-[0.18em] text-ash">copies on request</span>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <div class="cert-tile">
+        <div class="cert-mark">FSC</div>
+        <div class="cert-name">FSC<sup>®</sup> certified</div>
+        <div class="cert-note">Birch from sustainably managed forests</div>
+      </div>
+      <div class="cert-tile">
+        <div class="cert-mark">ISO</div>
+        <div class="cert-name">ISO 9001:2015</div>
+        <div class="cert-note">Quality management system</div>
+      </div>
+      <div class="cert-tile">
+        <div class="cert-mark">EN</div>
+        <div class="cert-name">EN 13388 / CE</div>
+        <div class="cert-note">EU compliance for carrier reels</div>
+      </div>
+      <div class="cert-tile">
+        <div class="cert-mark">REACH</div>
+        <div class="cert-name">REACH compliant</div>
+        <div class="cert-note">No restricted substances in adhesives or hardware</div>
+      </div>
+    </div>
+
+    <p class="text-[12px] text-ash mt-8 max-w-2xl leading-relaxed">
+      All certificates active. PDF copies sent on request with tender packs. Email <a href="mailto:docs@magicstbilisi.ge" class="text-ink underline-offset-4 hover:underline">docs@magicstbilisi.ge</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ========================= CUSTOMER GEOGRAPHY ========================= -->
+<section id="trusted" class="bg-white text-ink px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="flex items-baseline justify-between mb-12 md:mb-16 pb-6 border-b border-line">
+      <h2 class="display-md text-[24px] md:text-[36px]">Where we ship</h2>
+      <span class="hidden md:inline text-[11px] uppercase tracking-[0.18em] text-ash">14 countries · 2014–2026</span>
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 lg:gap-12">
+      <div class="col-span-12 lg:col-span-7">
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-3 text-[14px]">
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">DE</span><span>Germany</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">NL</span><span>Netherlands</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">PL</span><span>Poland</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">FI</span><span>Finland</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">SE</span><span>Sweden</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">NO</span><span>Norway</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">LT</span><span>Lithuania</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">LV</span><span>Latvia</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">EE</span><span>Estonia</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">UK</span><span>United Kingdom</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">US</span><span>United States</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">TR</span><span>Türkiye</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">AM</span><span>Armenia</span></li>
+          <li class="flex items-baseline gap-3"><span class="num text-ash text-[12px] w-6">AZ</span><span>Azerbaijan</span></li>
+        </ul>
+      </div>
+      <div class="col-span-12 lg:col-span-4 lg:col-start-9">
+        <div class="bg-surface p-6 rounded-2xl">
+          <div class="text-[11px] uppercase tracking-[0.18em] text-ash mb-3">Logistics</div>
+          <div class="text-[14px] leading-relaxed">
+            <p class="mb-3"><span class="text-ash">EU / UK:</span> sea freight from Poti and Batumi, 20' / 40' container.</p>
+            <p class="mb-3"><span class="text-ash">US:</span> sea via Constanța or Hamburg transhipment.</p>
+            <p><span class="text-ash">Incoterms:</span> EXW Tbilisi, FCA Poti, DAP by agreement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-[12px] text-ash mt-10 max-w-2xl leading-relaxed">
+      Customer references provided with tender packs — reference letter prepared in 2–3 working days. Email <a href="mailto:sales@magicstbilisi.ge" class="text-ink underline-offset-4 hover:underline">sales@magicstbilisi.ge</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ========================= FAQ ========================= -->
+<section id="faq" class="border-t border-line bg-white px-6 md:px-10 py-20 md:py-32" data-reveal>
+  <div class="mx-auto max-w-[1480px]">
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 mb-12 md:mb-20">
+      <h2 class="col-span-12 lg:col-span-7 display text-[34px] md:text-[64px]">Frequently asked</h2>
+      <p class="col-span-12 lg:col-span-4 lg:col-start-9 text-ash text-[14px] md:text-[16px] self-end">If your question isn't here — message WhatsApp and we'll reply within an hour during business hours (UTC+4).</p>
+    </div>
+
+    <ul class="divide-y divide-line border-t border-line">
+      <li><details class="faq-item">
+        <summary><span>What's the minimum order?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          From 20 units of one model. Smaller batches available from finished-goods stock if your size is in. Custom builds from 50 units.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>What are the lead times?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Standard sizes from the table — 7–14 working days. Custom drawings — up to four weeks. Exact lead time depends on current floor load and is confirmed in your quote.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>What are the payment terms?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Default: 50% deposit, 50% before dispatch. Net-30 by agreement for repeat customers. We accept USD, EUR, GBP and GEL by bank transfer.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>Do you make custom reels?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Yes. We accept DXF / DWG / PDF. If you only have parameters (cable weight, OD, winding length), we'll size the geometry for you. Drawings are signed off before tooling.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>How does shipping to the EU work?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Sea freight from Poti or Batumi in 20'/40' containers — typical transit 10–18 days to North-EU ports. CE certificate of compliance and packing list included. Incoterms EXW Tbilisi, FCA Poti, or DAP to your warehouse by agreement.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>Can I get a sample?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Small-diameter samples (Ø600/800) shipped free against a confirmed batch enquiry. Express courier at customer's expense.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>What certifications do you provide?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Quality passport with measurements per batch. Company-wide: FSC<sup>®</sup>, ISO 9001:2015, EN 13388 / CE, REACH compliance. Full PDF copies sent with tender packs.
+        </div>
+      </details></li>
+      <li><details class="faq-item">
+        <summary><span>What's included in the price?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-body">
+          Finished reel to drawing, with hardware, sanded, QR-tagged, on heat-treated EUR pallet, banded. Not included: freight (line-itemed separately), customs clearance at destination.
+        </div>
+      </details></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= CTA ========================= -->
+<section id="contact" class="px-6 md:px-10 pb-20 md:pb-28">
+  <div class="mx-auto max-w-[1480px]">
+    <div class="spotlight bg-ink text-white p-8 md:p-14 lg:p-20 grid grid-cols-12 gap-6 lg:gap-10" data-spotlight>
+      <div class="col-span-12 lg:col-span-7">
+        <div class="text-[12px] uppercase tracking-[0.18em] text-white/50 mb-6">Get in touch</div>
+        <h2 class="display text-[36px] md:text-[56px] lg:text-[68px] max-w-[18ch]">
+          Send a drawing — quote in&nbsp;24&nbsp;hours.
+        </h2>
+        <p class="mt-6 text-[14px] md:text-[15px] text-white/70 leading-relaxed max-w-[52ch]">
+          DXF/PDF drawing, cable type and order quantity — we send back price, lead time and freight to your warehouse. Phone and WhatsApp during Tbilisi business hours (UTC+4).
+        </p>
+      </div>
+
+      <div class="col-span-12 lg:col-span-5 lg:pl-6 flex flex-col justify-end">
+        <div class="space-y-3">
+          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="contact-row" style="background:#25D366;color:#fff;border-color:#25D366">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+            <span class="flex-1 text-left">WhatsApp</span>
+            <span class="num text-[13px]">+995 32 000 0000</span>
+          </a>
+          <a href="tel:+995320000000" class="contact-row" style="background:rgba(255,255,255,0.06);color:#fff;border-color:rgba(255,255,255,0.18)">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="flex-1 text-left">Call</span>
+            <span class="num text-[13px]">+995 32 000 0000</span>
+          </a>
+          <a href="mailto:sales@magicstbilisi.ge" class="contact-row" style="background:rgba(255,255,255,0.06);color:#fff;border-color:rgba(255,255,255,0.18)">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="M4 8l8 6 8-6"/></svg>
+            <span class="flex-1 text-left">Email</span>
+            <span class="text-[13px]">sales@magicstbilisi.ge</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer id="footer" class="border-t border-line bg-white">
+  <div class="mx-auto max-w-[1480px] px-6 md:px-10 pt-20 md:pt-32 pb-8 md:pb-10">
+
+    <!-- Top: oversized wordmark + manifesto -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-end pb-16 md:pb-24 border-b border-line">
+      <div class="col-span-12 lg:col-span-8">
+        <h2 class="display text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[13rem] leading-[0.85] tracking-[-0.05em] text-ink">
+          Magics<sup class="text-[#1E40FF] text-[0.32em] align-super font-medium">°</sup>
+        </h2>
+      </div>
+      <div class="col-span-12 lg:col-span-4">
+        <p class="text-ink text-[15px] md:text-[17px] leading-snug max-w-xs">
+          Wooden cable reels<br/>
+          and drums made<br/>
+          from birch plywood.<br/>
+          <span class="text-ash">Manufacturing in Tbilisi since 2014.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Middle: 4 nav columns -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 lg:gap-x-12 py-12 md:py-16 border-b border-line">
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-ash mb-5">Catalogue</div>
+        <ul class="space-y-2.5 text-ink text-[14px]">
+          <li><a href="#products" class="nav-link">Power reels</a></li>
+          <li><a href="#products" class="nav-link">Telecom drums</a></li>
+          <li><a href="#products" class="nav-link">Fiber spools</a></li>
+          <li><a href="#products" class="nav-link">Components</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-ash mb-5">For buyers</div>
+        <ul class="space-y-2.5 text-ink text-[14px]">
+          <li><a href="#specs" class="nav-link">Specs &amp; pricing</a></li>
+          <li><a href="#certs" class="nav-link">Certifications</a></li>
+          <li><a href="#operations" class="nav-link">Shipping</a></li>
+          <li><a href="mailto:sales@magicstbilisi.ge?subject=PDF%20catalogue%20request" class="nav-link">Catalogue PDF</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-ash mb-5">Company</div>
+        <ul class="space-y-2.5 text-ink text-[14px]">
+          <li><a href="#briefing" class="nav-link">About</a></li>
+          <li><a href="#process" class="nav-link">Process &amp; QC</a></li>
+          <li><a href="#trusted" class="nav-link">Where we ship</a></li>
+          <li><a href="mailto:careers@magicstbilisi.ge" class="nav-link">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-ash mb-5">Contact</div>
+        <ul class="space-y-2.5 text-ink text-[14px]">
+          <li><a href="tel:+995320000000" class="nav-link">+995 32 000 0000</a></li>
+          <li><a href="mailto:sales@magicstbilisi.ge" class="nav-link">sales@magicstbilisi.ge</a></li>
+          <li><a href="mailto:docs@magicstbilisi.ge" class="nav-link">docs@magicstbilisi.ge</a></li>
+        </ul>
+        <div class="mt-5 flex items-center gap-2">
+          <a href="https://wa.me/995320000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="messenger-icon" style="background:#25D366">
+            <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+          </a>
+          <a href="https://t.me/magicstbilisi" target="_blank" rel="noopener" aria-label="Telegram" class="messenger-icon" style="background:#229ED9">
+            <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.24 3.64 11.95c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          </a>
+          <a href="https://instagram.com/magicstbilisi" target="_blank" rel="noopener" aria-label="Instagram" class="messenger-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+            <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal entity / address / payment -->
+    <div class="grid grid-cols-12 gap-4 pt-8 md:pt-10 pb-6 border-b border-line text-[11px] text-ash leading-relaxed">
+      <div class="col-span-12 md:col-span-4">
+        <div class="uppercase tracking-[0.18em] mb-2">Legal entity</div>
+        <div class="text-ink">Magics Tbilisi LLC</div>
+        <div>Full registration details — supplied with contract</div>
+      </div>
+      <div class="col-span-12 md:col-span-4">
+        <div class="uppercase tracking-[0.18em] mb-2">Address</div>
+        <div class="text-ink">Tbilisi, Georgia</div>
+        <div>Factory address — for scheduled visits</div>
+      </div>
+      <div class="col-span-12 md:col-span-4">
+        <div class="uppercase tracking-[0.18em] mb-2">Payment</div>
+        <div class="text-ink">USD / EUR / GBP · bank transfer</div>
+        <div>Terms and deposit — on request</div>
+      </div>
+    </div>
+
+    <!-- Bottom: legal -->
+    <div class="grid grid-cols-12 gap-4 pt-6 items-baseline">
+      <div class="col-span-12 lg:col-span-6 num text-[11px] text-ash">
+        © 2014–2026 Magics Tbilisi LLC. All rights reserved.
+      </div>
+      <div class="col-span-12 lg:col-span-6 flex flex-wrap gap-x-6 lg:gap-x-8 gap-y-2 lg:justify-end text-[11px] text-ash">
+        <a href="legal.html" class="nav-link">Privacy policy</a>
+        <a href="legal.html#oferta" class="nav-link">Terms of sale</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ========================= MOBILE STICKY BOTTOM CONTACT BAR ========================= -->
+<div class="mobile-bottom-cta md:hidden">
+  <div class="bar">
+    <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" style="background:#25D366;color:#fff" aria-label="Message on WhatsApp">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+995320000000" style="background:#0A0A0A;color:#fff" aria-label="Call">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+</div>
+
+<script>
+  /* Reveal */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('[data-reveal], [data-reveal-stagger]').forEach(el => io.observe(el));
+
+  /* Carousel arrows */
+  document.querySelectorAll('[data-carousel-prev]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById(btn.dataset.carouselPrev);
+      const step = el.firstElementChild ? el.firstElementChild.offsetWidth + 12 : el.clientWidth * 0.66;
+      el.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+  });
+  document.querySelectorAll('[data-carousel-next]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById(btn.dataset.carouselNext);
+      const step = el.firstElementChild ? el.firstElementChild.offsetWidth + 12 : el.clientWidth * 0.66;
+      el.scrollBy({ left: step, behavior: 'smooth' });
+    });
+  });
+
+  /* Sync dots with carousel scroll (generic for any [carouselId, dotsId] pair) */
+  [['processCarousel', 'processDots'], ['specsCarousel', 'specsDots']].forEach(([carId, dotsId]) => {
+    const car = document.getElementById(carId);
+    const dotsWrap = document.getElementById(dotsId);
+    if (!car || !dotsWrap) return;
+    const dots = dotsWrap.querySelectorAll('.dot');
+    car.addEventListener('scroll', () => {
+      const child = car.firstElementChild;
+      if (!child) return;
+      const step = child.offsetWidth + 12;
+      const idx = Math.min(dots.length - 1, Math.round(car.scrollLeft / step));
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    }, { passive: true });
+  });
+
+  /* Smooth anchor scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const t = document.querySelector(id);
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+
+  /* Mobile menu */
+  (() => {
+    const menu = document.getElementById('mobileMenu');
+    if (!menu) return;
+    const open = () => {
+      menu.classList.add('is-open');
+      menu.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-locked');
+    };
+    const close = () => {
+      menu.classList.remove('is-open');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-locked');
+    };
+    document.querySelectorAll('[data-menu-open]').forEach(b => b.addEventListener('click', open));
+    document.querySelectorAll('[data-menu-close]').forEach(b => b.addEventListener('click', close));
+    menu.querySelectorAll('[data-menu-link]').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  })();
+
+  /* Page-load fade */
+  requestAnimationFrame(() => document.body.classList.add('is-loaded'));
+
+  /* Scroll progress + parallax + sticky nav (single rAF loop, batched reads/writes) */
+  (() => {
+    const root = document.documentElement;
+    const stickyNav = document.querySelector('.nav-sticky');
+    const heroSection = document.querySelector('section.hidden.md\\:block.relative');
+    let lastY = 0, ticking = false, lastDir = 0, navShown = false;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      const max = root.scrollHeight - innerHeight;
+      const progress = max > 0 ? Math.min(1, y / max) : 0;
+      root.style.setProperty('--scroll', progress);
+      root.style.setProperty('--scroll-px', y);
+
+      // Sticky nav appears on scroll-up after the hero is past
+      if (stickyNav && heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        const dir = y > lastY ? 1 : -1;
+        const past = y > heroBottom - 80;
+        const shouldShow = past && (dir < 0 || (dir > 0 && y > heroBottom + 200 === false));
+        // Simpler: show if past hero AND scrolling up; hide on scroll-down
+        const show = past && (dir < 0);
+        if (show && !navShown) { stickyNav.classList.add('is-visible'); navShown = true; }
+        else if ((dir > 0 || !past) && navShown && y > heroBottom) { stickyNav.classList.remove('is-visible'); navShown = false; }
+        else if (!past && navShown) { stickyNav.classList.remove('is-visible'); navShown = false; }
+        lastY = y;
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+    }, { passive: true });
+    onScroll();
+  })();
+
+  /* Animated number counters on scroll into view */
+  (() => {
+    const tickers = document.querySelectorAll('.ticker[data-count]');
+    if (!tickers.length || !('IntersectionObserver' in window)) return;
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    const animate = el => {
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const dur = 1400;
+      const start = performance.now();
+      const tick = now => {
+        const t = Math.min(1, (now - start) / dur);
+        const v = (target * ease(t));
+        el.textContent = (target % 1 === 0 ? Math.round(v) : v.toFixed(1)) + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    tickers.forEach(el => io.observe(el));
+  })();
+
+  /* Subtle magnetic effect on .magnetic buttons (desktop fine pointer only) */
+  (() => {
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const range = 14;
+    document.querySelectorAll('.magnetic').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        const fx = (x / (r.width / 2)) * range;
+        const fy = (y / (r.height / 2)) * range;
+        el.style.transform = `translate3d(${fx}px, ${fy}px, 0)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  })();
+
+  /* Cursor spotlight in dark sections */
+  (() => {
+    document.querySelectorAll('[data-spotlight]').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

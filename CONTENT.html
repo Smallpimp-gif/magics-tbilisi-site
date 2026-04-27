@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CONTENT — инструкция по замене placeholder'ов</title>
+<style>
+  :root { --ink: #0E0E0E; --ash: #6E6E73; --line: #E2E2E2; --warn: #B58200; --warn-bg: #FFF7DC; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { background: #F8F8F9; color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; padding: 32px 20px 80px; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h1 + .sub { color: var(--ash); font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; letter-spacing: -0.015em; margin: 48px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 24px 0 8px; }
+  p, li { font-size: 14.5px; }
+  code, kbd { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; background: #ECECEE; padding: 1px 6px; border-radius: 4px; }
+  pre { background: #0E0E0E; color: #E5E5E5; padding: 14px 18px; border-radius: 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; color: inherit; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; background: #F0F0F2; }
+  td:first-child code { background: var(--warn-bg); color: var(--warn); }
+  .demo-banner { background: #0E0E0E; color: #FFD23F; padding: 14px 18px; border-radius: 12px; font-size: 13px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px; }
+  .demo-banner svg { flex: none; margin-top: 2px; }
+  .back { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); text-decoration: none; font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; margin-bottom: 24px; }
+  .back:hover { background: #fff; }
+  ul { padding-left: 22px; }
+  ul li { margin-bottom: 4px; }
+  a { color: var(--ink); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+  .small { font-size: 12px; color: var(--ash); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a href="index.html" class="back">← Вернуться на сайт</a>
+
+<h1>CONTENT — что заменить в index.html</h1>
+<div class="sub">Все плейсхолдеры в одном месте. Откройте <code>index.html</code> в текстовом редакторе и сделайте find-and-replace для каждой строки.</div>
+
+<div class="demo-banner">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+  <div>Когда всё реальное — в <code>&lt;style&gt;</code> файла <code>index.html</code> найдите <code>--placeholder-on: 1</code> и поставьте <code>0</code>. Жёлтый бейдж и подсветка пропадут.</div>
+</div>
+
+<h2>1. Контакты <span class="small">(повторяются ~12 раз — find&amp;replace критично)</span></h2>
+<table>
+<thead><tr><th>Найти</th><th>Заменить на</th></tr></thead>
+<tbody>
+<tr><td><code>+995320000000</code></td><td>ваш номер WhatsApp без пробелов и <code>+</code> (например <code>79991234567</code>)</td></tr>
+<tr><td><code>+995 32 000 0000</code></td><td>ваш номер как он отображается людям</td></tr>
+<tr><td><code>tel:+995320000000</code></td><td><code>tel:+ваш_номер</code></td></tr>
+<tr><td><code>wa.me/995320000000</code></td><td><code>wa.me/ваш_номер</code> (тот же без <code>+</code>)</td></tr>
+<tr><td><code>sales@magicstbilisi.ge</code></td><td>email для заказов</td></tr>
+<tr><td><code>docs@magicstbilisi.ge</code></td><td>email для документов / сертификатов</td></tr>
+<tr><td><code>careers@magicstbilisi.ge</code></td><td>email для вакансий (или удалить ссылку)</td></tr>
+<tr><td><code>press@magicstbilisi.ge</code></td><td>можно тот же <code>sales@</code></td></tr>
+<tr><td><code>newsletter@magicstbilisi.ge</code></td><td>можно тот же <code>sales@</code></td></tr>
+</tbody>
+</table>
+
+<h2>2. Юр. реквизиты <span class="small">(footer)</span></h2>
+<table>
+<thead><tr><th>Найти</th><th>Заменить</th></tr></thead>
+<tbody>
+<tr><td><code>Magics Tbilisi LLC</code></td><td>реальное юр. имя (ООО / ИП / LLC / JSC)</td></tr>
+<tr><td><code>SIC: 405xxxxxx</code></td><td>реальный налоговый ID (ИНН/SIC/EIN/УНН)</td></tr>
+<tr><td><code>НДС: GExxxxxxxxxxx</code></td><td>реальный VAT/НДС или удалить</td></tr>
+<tr><td><code>0186, Грузия, Тбилиси</code></td><td>реальный почтовый индекс + страна + город</td></tr>
+<tr><td><code>ул. Саирме 14, корпус 3</code></td><td>реальный адрес цеха</td></tr>
+<tr><td><code>TBC Bank · USD/EUR/RUB</code></td><td>ваш банк и валюты счёта</td></tr>
+<tr><td><code>SWIFT: TBCBGE22</code></td><td>ваш SWIFT (если экспортируете)</td></tr>
+</tbody>
+</table>
+
+<h2>3. Сертификаты <span class="small">(<code>#certs</code>)</span></h2>
+<p>Сейчас 4 placeholder-карточки: FSC / ISO / EAC / CE.</p>
+<ul>
+<li>Если у вас есть только часть — удалите лишние карточки (блок <code>&lt;div class="cert-tile"&gt;…&lt;/div&gt;</code>)</li>
+<li>Если есть FSC — замените <code>FSC® C-XXXXXX</code> на ваш реальный номер</li>
+<li>Если есть ISO 9001 — оставьте, год сертификации поправьте</li>
+<li>Если ничего нет — удалите всю секцию <code>&lt;section id="certs"&gt;…&lt;/section&gt;</code>, и из меню/футера ссылки на <code>#certs</code></li>
+</ul>
+
+<h2>4. Цены в таблице <span class="small">(<code>#specs</code>)</span></h2>
+<p>Сейчас стоят placeholder-цены. Найти в таблице и в карточках для мобилы.</p>
+<table>
+<thead><tr><th>Модель</th><th>Сейчас</th><th>Заменить на</th></tr></thead>
+<tbody>
+<tr><td>TLC-600</td><td><code>$48</code></td><td>вашу цену в вашей валюте</td></tr>
+<tr><td>TLC-800</td><td><code>$72</code></td><td>…</td></tr>
+<tr><td>MED-1200</td><td><code>$165</code></td><td>…</td></tr>
+<tr><td>HV-1800</td><td><code>$340</code></td><td>…</td></tr>
+<tr><td>HV-2400</td><td><code>$580</code></td><td>…</td></tr>
+<tr><td>HV-3000</td><td><code>$890</code></td><td>…</td></tr>
+</tbody>
+</table>
+<p>Если цены не публикуете — замените все 6 на <code>по запросу</code> и удалите колонку «Цена от» (заголовок и <code>&lt;td&gt;</code>).</p>
+
+<h2>5. Модели и типоразмеры</h2>
+<p>Сейчас 6 моделей: TLC-600, TLC-800, MED-1200, HV-1800, HV-2400, HV-3000 — выдуманные артикулы.</p>
+<ul>
+<li>Если у вас другие — заменить во всех местах (таблица + карточки на мобиле + featured products + WhatsApp-сообщения)</li>
+<li>Если линейка короче — удалить лишние строки и карточки</li>
+<li>Если другой стандарт обозначений (DIN, ГОСТ) — переименовать</li>
+</ul>
+
+<h2>6. География отгрузок <span class="small">(<code>#trusted</code>)</span></h2>
+<p>Сейчас 14 стран: RU, BY, KZ, UZ, AM, AZ, TR, PL, DE, LT, LV, EE, FI, SE.</p>
+<ul>
+<li>Удалите страны, в которые не отгружаете (блоки <code>&lt;li class="flex items-baseline gap-3"&gt;…&lt;/li&gt;</code>)</li>
+<li>Добавьте недостающие</li>
+<li>Если только СНГ — удалите EU-блок целиком</li>
+</ul>
+
+<h2>7. Цифры в <code>#profile</code></h2>
+<table>
+<thead><tr><th>Сейчас</th><th>Заменить</th></tr></thead>
+<tbody>
+<tr><td><code>12+</code> лет на рынке</td><td>реальный возраст компании</td></tr>
+<tr><td><code>80+</code> человек в цеху</td><td>реальный штат (или удалить блок)</td></tr>
+<tr><td><code>3K+</code> катушек / месяц</td><td>реальная мощность (или «по запросу»)</td></tr>
+<tr><td><code>14</code> стран отгрузки</td><td>реальное число</td></tr>
+</tbody>
+</table>
+
+<h2>8. О компании <span class="small">(<code>#briefing</code>)</span></h2>
+<p>В тексте: «Наш цех в Тбилиси работает с 2014 года…» — поправьте год основания, города и перечень стран.</p>
+
+<h2>9. Координаты на карте <span class="small">(<code>#operations</code>)</span></h2>
+<p>Три города — Тбилиси, Поти, Батуми. Если вы не в Грузии:</p>
+<ul>
+<li>Замените координаты в SVG-карте (<code>&lt;circle cx="…" cy="…"&gt;</code> — это координаты на векторной картинке, не геокоординаты)</li>
+<li>В ссылках Google Maps <code>query=41.7,44.8</code> поставьте ваши реальные lat,lng</li>
+<li>Названия городов и адреса поменяйте</li>
+</ul>
+
+<h2>10. Фото</h2>
+<p>Сейчас все 6 фото — стоковые (Karpow, Балла-Шёттнер, Cosens, Compagnons, Hoogmoed). Минимум для доверия:</p>
+<table>
+<thead><tr><th>Где</th><th>Чем заменить</th></tr></thead>
+<tbody>
+<tr><td>Hero (mobile + desktop)</td><td>Реальное фото вашего цеха или партии катушек на палете</td></tr>
+<tr><td>Каталог × 5</td><td>Фото 5 моделей на белом фоне (минимум — один ракурс каждой)</td></tr>
+</tbody>
+</table>
+<p>URL менять в <code>&lt;img src="https://images.unsplash.com/…"&gt;</code> на свои. Можно положить в <code>/photos/</code> и указать <code>src="photos/hero.jpg"</code>.</p>
+
+<h2>11. Логотип</h2>
+<p>Сейчас текстовый «Magics°» с синей точкой. Если есть SVG-лого — заменить в:</p>
+<ul>
+<li>Mobile header</li>
+<li>Desktop header</li>
+<li>Mobile menu header</li>
+<li>Footer wordmark</li>
+</ul>
+
+<h2>12. SEO <span class="small">(<code>&lt;head&gt;</code>)</span></h2>
+<pre><code>&lt;title&gt;Magics Tbilisi — деревянные кабельные катушки от производителя&lt;/title&gt;
+&lt;meta name="description" content="…"&gt;
+&lt;meta property="og:title" content="…"&gt;
+&lt;meta property="og:description" content="…"&gt;</code></pre>
+<p>Замените «Magics Tbilisi» на ваше имя, описание — на ваш одно-предложенческий питч.</p>
+
+<hr/>
+
+<h2>Когда всё готово</h2>
+<p>В <code>&lt;style&gt;</code> файла <code>index.html</code> найдите:</p>
+<pre><code>:root {
+  --placeholder-on: 1;
+}</code></pre>
+<p>Поставьте <code>0</code>. Жёлтый бейдж и плейсхолдер-подсветка пропадут.</p>
+
+<h2>Чего ещё нет <span class="small">(если понадобится — допишу)</span></h2>
+<ul>
+<li>Переключатель языков (RU / EN / GE)</li>
+<li>Embedded Google Maps с реальной геолокацией</li>
+<li>Online-форма заказа с отправкой через Formspree/Getform</li>
+<li>Скачиваемый PDF-каталог</li>
+<li>Блок «отзывы клиентов» с цитатами и логотипами</li>
+<li>Калькулятор «диаметр × количество → ориентировочная цена»</li>
+</ul>
+<p>Скажите «нужно» — добавлю.</p>
+
+<a href="index.html" class="back" style="margin-top:48px">← Вернуться на сайт</a>
+
+</div>
+</body>
+</html>
