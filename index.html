@@ -603,7 +603,7 @@
       transform: translateY(0);
       pointer-events: auto;
     }
-    /* Floating burger — appears on scroll past hero, mirrors hero header position */
+    /* Floating burger — appears on scroll past hero, glassy iOS-style to match hero burger */
     .mobile-burger-float {
       position: fixed;
       right: 20px;
@@ -612,11 +612,13 @@
       height: 44px; width: 44px;
       display: grid; place-items: center;
       border-radius: 999px;
-      background: rgba(14,14,14,0.92);
-      color: #fff;
-      box-shadow: 0 12px 30px -10px rgba(10,10,10,0.35);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.55);
+      color: #0A0A0A;
+      box-shadow:
+        inset 0 0 0 1px rgba(10,10,10,0.08),
+        0 8px 24px -8px rgba(10,10,10,0.18);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
       transform: translateY(-150%);
       transition: transform .35s var(--ease);
       pointer-events: none;
