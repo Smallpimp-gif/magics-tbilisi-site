@@ -395,7 +395,7 @@
     display: block;
     margin-top: 14px;
     padding: 12px 16px;
-    background: #25D366; color: #FFFFFF;
+    background: #25D366; color: #0A0A0A;
     border-radius: var(--r-sm);
     font-size: 13px; font-weight: 600;
     text-align: center;
@@ -516,7 +516,7 @@
 
   /* Round button */
   .rb {
-    width: 40px; height: 40px;
+    width: 44px; height: 44px;
     border-radius: 999px;
     display: grid; place-items: center;
     border: 1px solid #D9D9D9;
@@ -552,8 +552,8 @@
     min-height: 48px;
   }
   .contact-btn:active { transform: translateY(1px) scale(0.99); }
-  .contact-btn-wa { background: #25D366; color: #FFFFFF; }
-  .contact-btn-wa:hover { background: #1EBE5B; }
+  .contact-btn-wa { background: #25D366; color: #0A0A0A; }
+  .contact-btn-wa:hover { background: #1EBE5B; color: #0A0A0A; }
   .contact-btn-phone { background: #0A0A0A; color: #FFFFFF; }
   .contact-btn-phone:hover { background: #1c1c1c; }
 
@@ -941,7 +941,7 @@
     </div>
     <nav class="flex items-center gap-5">
       <a href="tel:+995320000000" class="nav-link num">+995 32 000 0000</a>
-      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill magnetic" style="background:#25D366;color:#fff;padding:8px 14px;font-size:13px">
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill magnetic" style="background:#25D366;color:#0A0A0A;padding:8px 14px;font-size:13px">
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
         WhatsApp
       </a>
@@ -972,7 +972,7 @@
     </nav>
 
     <div class="mt-auto p-5 border-t border-[#E5E5EA] space-y-2">
-      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="menu-cta" style="background:#25D366;color:#fff">
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="menu-cta" style="background:#25D366;color:#0A0A0A">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
         Message on WhatsApp
       </a>
@@ -988,12 +988,18 @@
   </div>
 </div>
 
+<main id="main">
+
 <!-- ========================= MOBILE CINEMATIC HERO (md:hidden) ========================= -->
 <section class="md:hidden relative overflow-hidden" aria-label="Welcome" style="height: 100dvh; min-height: 620px; max-height: 820px;">
   <!-- Background photo, full bleed -->
   <img
     src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1400&q=85"
     alt="Wooden cable reel on the production floor"
+    width="1400"
+    height="2100"
+    fetchpriority="high"
+    decoding="async"
     class="hero-parallax absolute inset-0 h-full w-full object-cover scale-105"
     loading="eager"
   />
@@ -1030,7 +1036,7 @@
         Call
       </a>
     </div>
-    <a href="#products" class="mt-5 flex items-center justify-center gap-2 text-[12px] text-white/75 uppercase tracking-[0.15em]">
+    <a href="#products" class="mt-3 flex items-center justify-center gap-2 py-3 min-h-[44px] text-[12px] text-white/75 uppercase tracking-[0.15em]">
       Catalogue ↓
     </a>
   </div>
@@ -1063,7 +1069,7 @@
     </div>
     <nav class="hidden md:flex items-center gap-5">
       <a href="tel:+995320000000" class="nav-link num">+995 32 000 0000</a>
-      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#fff;padding:8px 14px;font-size:13px">
+      <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#0A0A0A;padding:8px 14px;font-size:13px">
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
         WhatsApp
       </a>
@@ -1077,6 +1083,10 @@
       <img
         src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1600&q=80"
         alt="Close-up of a wooden cable reel"
+        width="1600"
+        height="1067"
+        fetchpriority="high"
+        decoding="async"
         class="hero-parallax absolute inset-0 h-full w-full object-cover scale-110"
         loading="eager"
       />
@@ -1088,6 +1098,10 @@
         src="https://images.unsplash.com/photo-1755413566879-a8c5a4719c86?auto=format&fit=crop&w=1600&q=80"
         alt=""
         aria-hidden="true"
+        width="1600"
+        height="1067"
+        loading="lazy"
+        decoding="async"
         class="hero-blur absolute inset-0 h-full w-full object-cover"
       />
       <div class="absolute inset-0 bg-black/10"></div>
@@ -1103,7 +1117,7 @@
           Birch plywood reels and drums Ø600–3000&nbsp;mm for cable manufacturers, telecom and fiber operators across the EU, UK and US. In-house CNC, palletised dispatch from Poti.
         </p>
         <div class="mt-8 flex items-center gap-3 flex-wrap">
-          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#fff">
+          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="cta-pill" style="background:#25D366;color:#0A0A0A">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
             WhatsApp
           </a>
@@ -1164,7 +1178,7 @@
       <!-- Card 1 -->
       <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
         <div class="absolute inset-0 grid place-items-center p-12">
-          <img src="https://images.unsplash.com/photo-1758965364875-e090e5423d2d?auto=format&fit=crop&w=900&q=80" alt="HV-3000 wooden cable reel — Sergej Karpow / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+          <img src="https://images.unsplash.com/photo-1758965364875-e090e5423d2d?auto=format&fit=crop&w=900&q=80" alt="HV-3000 wooden cable reel — Sergej Karpow / Unsplash" width="900" height="900" loading="lazy" decoding="async" class="product-img max-h-[70%] w-auto object-contain"/>
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
           <div>
@@ -1180,7 +1194,7 @@
       <!-- Card 2 -->
       <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
         <div class="absolute inset-0 grid place-items-center p-12">
-          <img src="https://images.unsplash.com/photo-1562003190-30e1cab33289?auto=format&fit=crop&w=900&q=80" alt="TLC-800 telecom drum — Bence Balla-Schottner / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+          <img src="https://images.unsplash.com/photo-1562003190-30e1cab33289?auto=format&fit=crop&w=900&q=80" alt="TLC-800 telecom drum — Bence Balla-Schottner / Unsplash" width="900" height="900" loading="lazy" decoding="async" class="product-img max-h-[70%] w-auto object-contain"/>
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
           <div>
@@ -1196,7 +1210,7 @@
       <!-- Card 3 -->
       <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
         <div class="absolute inset-0 grid place-items-center p-12">
-          <img src="https://images.unsplash.com/photo-1770117663307-a76e820df814?auto=format&fit=crop&w=900&q=80" alt="FBR-500 fiber-optic spool — Jonathan Cosens / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+          <img src="https://images.unsplash.com/photo-1770117663307-a76e820df814?auto=format&fit=crop&w=900&q=80" alt="FBR-500 fiber-optic spool — Jonathan Cosens / Unsplash" width="900" height="900" loading="lazy" decoding="async" class="product-img max-h-[70%] w-auto object-contain"/>
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
           <div>
@@ -1212,7 +1226,7 @@
       <!-- Card 4 -->
       <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
         <div class="absolute inset-0 grid place-items-center p-12">
-          <img src="https://images.unsplash.com/photo-1776278515712-9d5753884f5f?auto=format&fit=crop&w=900&q=80" alt="FLG-1500 birch plywood flange — Compagnons / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+          <img src="https://images.unsplash.com/photo-1776278515712-9d5753884f5f?auto=format&fit=crop&w=900&q=80" alt="FLG-1500 birch plywood flange — Compagnons / Unsplash" width="900" height="900" loading="lazy" decoding="async" class="product-img max-h-[70%] w-auto object-contain"/>
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
           <div>
@@ -1228,7 +1242,7 @@
       <!-- Card 5 -->
       <a href="#specs" class="product-card relative block aspect-[3/4] bg-card overflow-hidden">
         <div class="absolute inset-0 grid place-items-center p-12">
-          <img src="https://images.unsplash.com/photo-1774380603683-c5634902a5bc?auto=format&fit=crop&w=900&q=80" alt="MED-1200 medium-voltage drum — Peter Hoogmoed / Unsplash" class="product-img max-h-[70%] w-auto object-contain"/>
+          <img src="https://images.unsplash.com/photo-1774380603683-c5634902a5bc?auto=format&fit=crop&w=900&q=80" alt="MED-1200 medium-voltage drum — Peter Hoogmoed / Unsplash" width="900" height="900" loading="lazy" decoding="async" class="product-img max-h-[70%] w-auto object-contain"/>
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between">
           <div>
@@ -1829,7 +1843,7 @@
 
       <div class="col-span-12 lg:col-span-5 lg:pl-6 flex flex-col justify-end">
         <div class="space-y-3">
-          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="contact-row" style="background:#25D366;color:#fff;border-color:#25D366">
+          <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" class="contact-row" style="background:#25D366;color:#0A0A0A;border-color:#25D366">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
             <span class="flex-1 text-left">WhatsApp</span>
             <span class="num text-[13px]">+995 32 000 0000</span>
@@ -1849,6 +1863,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ========================= FOOTER ========================= -->
 <footer id="footer" class="border-t border-line bg-white">
@@ -1962,7 +1978,7 @@
 <!-- ========================= MOBILE STICKY BOTTOM CONTACT BAR (appears on scroll past hero) ========================= -->
 <div class="mobile-bottom-cta md:hidden" aria-hidden="true">
   <div class="bar">
-    <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" style="background:#25D366;color:#fff" aria-label="Message on WhatsApp">
+    <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" style="background:#25D366;color:#0A0A0A" aria-label="Message on WhatsApp">
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
       WhatsApp
     </a>
