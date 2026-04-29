@@ -589,12 +589,19 @@
       background: #F2F2F7;
       color: #0A0A0A;
     }
-    /* Bottom sticky contact bar */
+    /* Bottom sticky contact bar — hidden until scrolled past hero */
     .mobile-bottom-cta {
       position: fixed; left: 0; right: 0; bottom: 0;
       padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
       background: linear-gradient(to top, #F2F2F7 70%, rgba(242,242,247,0));
       z-index: 60;
+      transform: translateY(120%);
+      transition: transform .35s var(--ease);
+      pointer-events: none;
+    }
+    .mobile-bottom-cta.is-visible {
+      transform: translateY(0);
+      pointer-events: auto;
     }
     .mobile-bottom-cta .bar {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -1922,6 +1929,20 @@
   </div>
 </footer>
 
+<!-- ========================= MOBILE STICKY BOTTOM CONTACT BAR (appears on scroll past hero) ========================= -->
+<div class="mobile-bottom-cta md:hidden" aria-hidden="true">
+  <div class="bar">
+    <a href="https://wa.me/995320000000?text=Hello,%20interested%20in%20cable%20reels" target="_blank" rel="noopener" style="background:#25D366;color:#fff" aria-label="Message on WhatsApp">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zM12.04 20.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.22-8.23 8.22z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+995320000000" style="background:#0A0A0A;color:#fff" aria-label="Call">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+</div>
+
 <script>
   /* Reveal */
   const io = new IntersectionObserver((entries) => {
@@ -2001,7 +2022,9 @@
     const root = document.documentElement;
     const stickyNav = document.querySelector('.nav-sticky');
     const heroSection = document.querySelector('section.hidden.md\\:block.relative');
-    let lastY = 0, ticking = false, lastDir = 0, navShown = false;
+    const mobileHero = document.querySelector('section.md\\:hidden.relative.overflow-hidden');
+    const mobileCta = document.querySelector('.mobile-bottom-cta');
+    let lastY = 0, ticking = false, lastDir = 0, navShown = false, ctaShown = false;
 
     const onScroll = () => {
       const y = window.scrollY;
@@ -2023,6 +2046,15 @@
         else if (!past && navShown) { stickyNav.classList.remove('is-visible'); navShown = false; }
         lastY = y;
       }
+
+      // Mobile sticky bottom CTA: visible once hero is past, hidden while inside hero
+      if (mobileCta && mobileHero) {
+        const mHeroBottom = mobileHero.offsetTop + mobileHero.offsetHeight;
+        const pastMHero = y > mHeroBottom - 120;
+        if (pastMHero && !ctaShown) { mobileCta.classList.add('is-visible'); mobileCta.setAttribute('aria-hidden', 'false'); ctaShown = true; }
+        else if (!pastMHero && ctaShown) { mobileCta.classList.remove('is-visible'); mobileCta.setAttribute('aria-hidden', 'true'); ctaShown = false; }
+      }
+
       ticking = false;
     };
     window.addEventListener('scroll', () => {
