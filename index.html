@@ -603,6 +603,29 @@
       transform: translateY(0);
       pointer-events: auto;
     }
+    /* Floating burger — appears on scroll past hero, mirrors bottom CTA logic */
+    .mobile-burger-float {
+      position: fixed;
+      right: 14px;
+      top: calc(env(safe-area-inset-top, 0px) + 14px);
+      z-index: 70;
+      height: 44px; width: 44px;
+      display: grid; place-items: center;
+      border-radius: 999px;
+      background: rgba(14,14,14,0.92);
+      color: #fff;
+      box-shadow: 0 12px 30px -10px rgba(10,10,10,0.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transform: translateY(-150%);
+      transition: transform .35s var(--ease);
+      pointer-events: none;
+    }
+    .mobile-burger-float.is-visible {
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .mobile-burger-float:active { transform: translateY(0) scale(0.95); }
     .mobile-bottom-cta .bar {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 8px;
@@ -1929,6 +1952,11 @@
   </div>
 </footer>
 
+<!-- ========================= FLOATING BURGER (appears on scroll past hero) ========================= -->
+<button class="mobile-burger-float md:hidden" aria-label="Open menu" data-menu-open type="button" aria-hidden="true">
+  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+
 <!-- ========================= MOBILE STICKY BOTTOM CONTACT BAR (appears on scroll past hero) ========================= -->
 <div class="mobile-bottom-cta md:hidden" aria-hidden="true">
   <div class="bar">
@@ -2024,7 +2052,8 @@
     const heroSection = document.querySelector('section.hidden.md\\:block.relative');
     const mobileHero = document.querySelector('section.md\\:hidden.relative.overflow-hidden');
     const mobileCta = document.querySelector('.mobile-bottom-cta');
-    let lastY = 0, ticking = false, lastDir = 0, navShown = false, ctaShown = false;
+    const mobileBurger = document.querySelector('.mobile-burger-float');
+    let lastY = 0, ticking = false, lastDir = 0, navShown = false, ctaShown = false, burgerShown = false;
 
     const onScroll = () => {
       const y = window.scrollY;
@@ -2047,12 +2076,18 @@
         lastY = y;
       }
 
-      // Mobile sticky bottom CTA: visible once hero is past, hidden while inside hero
-      if (mobileCta && mobileHero) {
+      // Mobile sticky bottom CTA + floating burger: visible once hero is past
+      if (mobileHero) {
         const mHeroBottom = mobileHero.offsetTop + mobileHero.offsetHeight;
         const pastMHero = y > mHeroBottom - 120;
-        if (pastMHero && !ctaShown) { mobileCta.classList.add('is-visible'); mobileCta.setAttribute('aria-hidden', 'false'); ctaShown = true; }
-        else if (!pastMHero && ctaShown) { mobileCta.classList.remove('is-visible'); mobileCta.setAttribute('aria-hidden', 'true'); ctaShown = false; }
+        if (mobileCta) {
+          if (pastMHero && !ctaShown) { mobileCta.classList.add('is-visible'); mobileCta.setAttribute('aria-hidden', 'false'); ctaShown = true; }
+          else if (!pastMHero && ctaShown) { mobileCta.classList.remove('is-visible'); mobileCta.setAttribute('aria-hidden', 'true'); ctaShown = false; }
+        }
+        if (mobileBurger) {
+          if (pastMHero && !burgerShown) { mobileBurger.classList.add('is-visible'); mobileBurger.setAttribute('aria-hidden', 'false'); burgerShown = true; }
+          else if (!pastMHero && burgerShown) { mobileBurger.classList.remove('is-visible'); mobileBurger.setAttribute('aria-hidden', 'true'); burgerShown = false; }
+        }
       }
 
       ticking = false;
