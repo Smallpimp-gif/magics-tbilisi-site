@@ -996,7 +996,8 @@
   .lead-modal {
     position: fixed; inset: 0; z-index: 100;
     display: none;
-    align-items: flex-end; justify-content: center;
+    align-items: center; justify-content: center;
+    padding: 16px;
     background: rgba(10,10,10,0.45);
     backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
     opacity: 0; transition: opacity .25s var(--ease);
@@ -1005,22 +1006,18 @@
   .lead-modal__card {
     width: 100%; max-width: 460px;
     background: #FFFFFF; color: #0A0A0A;
-    border-radius: 24px 24px 0 0;
-    padding: 24px 22px calc(env(safe-area-inset-bottom, 0px) + 22px);
-    transform: translateY(40px);
+    border-radius: 24px;
+    padding: 24px 22px;
+    transform: translateY(20px) scale(0.98);
     transition: transform .3s var(--ease);
-    max-height: 92vh; overflow-y: auto;
+    max-height: calc(100dvh - 32px); overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .lead-modal.is-open .lead-modal__card { transform: translateY(0); }
+  .lead-modal.is-open .lead-modal__card { transform: translateY(0) scale(1); }
   @media (min-width: 768px) {
-    .lead-modal { align-items: center; }
     .lead-modal__card {
-      border-radius: 24px;
       padding: 28px 28px 28px;
-      transform: translateY(20px) scale(0.98);
     }
-    .lead-modal.is-open .lead-modal__card { transform: translateY(0) scale(1); }
   }
   .lead-modal__head {
     display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
