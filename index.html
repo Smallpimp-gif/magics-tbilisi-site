@@ -6,7 +6,7 @@
 <title>Magics Tbilisi — wooden cable reels & birch plywood drum components</title>
 <meta name="description" content="We manufacture wooden cable reels and birch plywood drums Ø600–3000 mm for cable manufacturers and contractors. CNC factory in Tbilisi, palletised dispatch to the EU, UK and US. Quote in 24 hours." />
 <meta property="og:title" content="Magics Tbilisi — wooden cable reels & birch plywood drum components" />
-<meta property="og:description" content="Plywood processing factory in Batumi since 2014, office in Tbilisi. Birch plywood reels, trolleys and custom CNC parts. 1,000 m³ monthly, EU1 / FSC / ISO 9001." />
+<meta property="og:description" content="Plywood processing factory in Batumi since 2014, office in Tbilisi. Birch plywood reels, trolleys and custom CNC parts. 1,000 m³ monthly, E1 / FSC / ISO 9001." />
 <meta property="og:locale" content="en_US" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -566,6 +566,7 @@
     font-size: 12px; color: #6E6E73;
   }
   .trust-pill .num { color: #0A0A0A; font-weight: 600; font-size: 13px; }
+  .trust-pill .cert { color: #0A0A0A; font-weight: 600; font-size: 13px; letter-spacing: -0.005em; }
 
   /* ===================== MOBILE APP-STYLE OVERRIDES (LIGHT) ===================== */
   @media (max-width: 767px) {
@@ -678,6 +679,9 @@
     /* Apply app-style to existing sections on mobile */
     section { padding-left: 16px !important; padding-right: 16px !important; }
     section[id="products"], section[id="briefing"], section[id="engineers"] { padding-top: 36px !important; padding-bottom: 24px !important; }
+    /* No dividers around #profile stats block — clean cards on light bg, like trust pills */
+    section[id="briefing"]:has(+ section#profile) { padding-bottom: 0 !important; }
+    section#profile + section#engineers { padding-top: 48px !important; border-top: 0 !important; }
     section[id="contact"] { padding-bottom: 24px !important; }
 
     /* Featured products → vertical list of app cards */
@@ -759,7 +763,7 @@
 
     /* Stats strip → list rows */
     section#profile { border: 0 !important; padding: 0 16px !important; }
-    section#profile > div { display: flex !important; flex-direction: column !important; gap: 10px; padding: 8px 0 !important; }
+    section#profile > div { display: flex !important; flex-direction: column !important; gap: 12px; padding: 12px 0 !important; }
     section#profile > div > div {
       background: #FFFFFF !important; border-radius: 22px;
       padding: 18px 20px !important;
@@ -942,6 +946,169 @@
   @media (min-width: 768px) {
     .specs-mobile { display: none !important; }
   }
+
+  /* ========================= LEAD CHAT (floating button + modal) ========================= */
+  .lead-fab {
+    position: fixed;
+    right: 20px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+    z-index: 65;
+    display: inline-flex; align-items: center; gap: 10px;
+    height: 56px; padding: 0 22px;
+    border-radius: 999px;
+    background: #0A0A0A; color: #fff;
+    font-weight: 600; font-size: 15px; letter-spacing: -0.01em;
+    box-shadow:
+      0 16px 40px -12px rgba(10,10,10,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.06);
+    transition: transform .35s var(--ease), opacity .25s var(--ease), box-shadow .25s var(--ease);
+    cursor: pointer;
+    border: 0;
+    /* Hidden by default — revealed once hero is past (mirrors floating burger / bottom CTA bar) */
+    transform: translateY(160%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .lead-fab.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lead-fab.is-visible:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px -14px rgba(10,10,10,0.55), inset 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .lead-fab.is-visible:active { transform: translateY(0) scale(0.98); }
+  /* On mobile: shrink to icon-only and lift above the sticky bottom CTA bar */
+  @media (max-width: 767px) {
+    .lead-fab {
+      bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+      height: 52px; width: 52px; padding: 0;
+      justify-content: center;
+    }
+    .lead-fab .lead-fab-label { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lead-fab { transition: none; }
+  }
+
+  /* Modal */
+  .lead-modal {
+    position: fixed; inset: 0; z-index: 100;
+    display: none;
+    align-items: flex-end; justify-content: center;
+    background: rgba(10,10,10,0.45);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    opacity: 0; transition: opacity .25s var(--ease);
+  }
+  .lead-modal.is-open { display: flex; opacity: 1; }
+  .lead-modal__card {
+    width: 100%; max-width: 460px;
+    background: #FFFFFF; color: #0A0A0A;
+    border-radius: 24px 24px 0 0;
+    padding: 24px 22px calc(env(safe-area-inset-bottom, 0px) + 22px);
+    transform: translateY(40px);
+    transition: transform .3s var(--ease);
+    max-height: 92vh; overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .lead-modal.is-open .lead-modal__card { transform: translateY(0); }
+  @media (min-width: 768px) {
+    .lead-modal { align-items: center; }
+    .lead-modal__card {
+      border-radius: 24px;
+      padding: 28px 28px 28px;
+      transform: translateY(20px) scale(0.98);
+    }
+    .lead-modal.is-open .lead-modal__card { transform: translateY(0) scale(1); }
+  }
+  .lead-modal__head {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    margin-bottom: 18px;
+  }
+  .lead-modal__title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+  .lead-modal__sub { color: #8E8E93; font-size: 13px; margin-top: 4px; }
+  .lead-modal__close {
+    flex: none;
+    width: 36px; height: 36px; border-radius: 999px;
+    background: #F2F2F7; color: #0A0A0A;
+    display: grid; place-items: center;
+    border: 0; cursor: pointer;
+    transition: background-color .2s var(--ease);
+  }
+  .lead-modal__close:hover { background: #E5E5EA; }
+
+  .lead-form { display: flex; flex-direction: column; gap: 12px; }
+  .lead-field { display: flex; flex-direction: column; gap: 6px; }
+  .lead-field label { font-size: 12px; color: #6E6E73; letter-spacing: 0.02em; font-weight: 500; }
+  .lead-field input,
+  .lead-field textarea {
+    width: 100%;
+    background: #F2F2F7;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 14px 14px;
+    font-size: 16px; /* 16px to avoid iOS zoom */
+    color: #0A0A0A;
+    font-family: inherit;
+    transition: border-color .15s var(--ease), background-color .15s var(--ease);
+    -webkit-appearance: none;
+  }
+  .lead-field textarea { resize: vertical; min-height: 84px; }
+  .lead-field input:focus,
+  .lead-field textarea:focus {
+    outline: none;
+    background: #FFFFFF;
+    border-color: #0A0A0A;
+  }
+  .lead-field input::placeholder,
+  .lead-field textarea::placeholder { color: #C7C7CC; }
+  .lead-honey { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+  .lead-submit {
+    margin-top: 6px;
+    height: 52px;
+    border-radius: 14px;
+    background: #0A0A0A; color: #fff;
+    font-weight: 600; font-size: 15px;
+    border: 0; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    transition: opacity .2s var(--ease), transform .15s var(--ease);
+  }
+  .lead-submit:hover { opacity: 0.92; }
+  .lead-submit:active { transform: scale(0.99); }
+  .lead-submit:disabled { opacity: 0.6; cursor: progress; }
+  .lead-submit .spin {
+    width: 16px; height: 16px; border-radius: 999px;
+    border: 2px solid rgba(255,255,255,0.35); border-top-color: #fff;
+    animation: lead-spin .7s linear infinite;
+    display: none;
+  }
+  .lead-submit.is-loading .spin { display: inline-block; }
+  @keyframes lead-spin { to { transform: rotate(360deg); } }
+  .lead-foot { font-size: 12px; color: #8E8E93; text-align: center; margin-top: 4px; }
+  .lead-error {
+    background: #FFF3F3; color: #B91C1C;
+    border-radius: 12px; padding: 10px 12px;
+    font-size: 13px;
+    display: none;
+  }
+  .lead-error.is-shown { display: block; }
+
+  /* Success state */
+  .lead-success { display: none; text-align: center; padding: 18px 6px 6px; }
+  .lead-success.is-shown { display: block; }
+  .lead-success__check {
+    width: 64px; height: 64px; border-radius: 999px;
+    background: #34C759; color: #fff;
+    display: grid; place-items: center;
+    margin: 0 auto 18px;
+    animation: lead-pop .35s var(--ease);
+  }
+  @keyframes lead-pop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .lead-success__title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+  .lead-success__text { color: #6E6E73; font-size: 14px; margin-top: 8px; line-height: 1.5; }
+
+  body.lead-modal-open { overflow: hidden; }
 </style>
 </head>
 
@@ -1071,12 +1238,12 @@
 </section>
 
 <!-- ========================= MOBILE TRUST STRIP (after hero) ========================= -->
-<div class="md:hidden px-4 pt-5">
-  <div class="grid grid-cols-2 gap-2">
+<div class="md:hidden px-4 pt-3 pb-3">
+  <div class="grid grid-cols-2 gap-3">
     <div class="trust-pill"><span class="num">12+</span><span>years experience</span></div>
     <div class="trust-pill"><span class="num">1,000</span><span>m³ / month</span></div>
     <div class="trust-pill"><span class="num">14</span><span>export markets</span></div>
-    <div class="trust-pill"><span class="num">EU1</span><span>+ FSC + ISO 9001</span></div>
+    <div class="trust-pill" style="gap:5px"><span class="cert">ISO&nbsp;9001</span><span>·&nbsp;FSC&nbsp;·&nbsp;E1</span></div>
   </div>
 </div>
 
@@ -1943,7 +2110,7 @@
         <h2 class="display-md text-[28px] md:text-[44px] max-w-[22ch]">Georgian plywood mills supplying our material<span class="text-ash"> — short chain, traceable stock.</span></h2>
       </div>
       <div class="col-span-12 md:col-span-4 md:col-start-9 text-ash text-[14px] md:text-[15px] self-end">
-        Local sourcing keeps our chain short — birch from Caucasian forests, EU1-graded, FSC-certified mills. Full reference list on request.
+        Local sourcing keeps our chain short — birch from Caucasian forests, E1-graded, FSC-certified mills. Full reference list on request.
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-line border border-line">
@@ -2088,6 +2255,72 @@
   </div>
 </div>
 
+<!-- ========================= LEAD CHAT FLOATING BUTTON ========================= -->
+<button type="button" class="lead-fab" data-lead-open aria-label="Request a quote">
+  <span class="lead-fab-icon md:hidden" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <!-- Headband arch over the head -->
+      <path d="M12 2C6.92 2 3 6.04 3 11v3h2v-3c0-3.95 3.13-7 7-7s7 3.05 7 7v3h2v-3c0-4.96-3.92-9-9-9z"/>
+      <!-- Left ear cup -->
+      <rect x="2" y="11" width="4" height="6.5" rx="1.6"/>
+      <!-- Right ear cup -->
+      <rect x="18" y="11" width="4" height="6.5" rx="1.6"/>
+      <!-- Mic arm curving from right cup down to mouth -->
+      <path d="M18 17.5c0 3.04-2.46 5.5-5.5 5.5H12a1 1 0 1 1 0-2h.5c1.93 0 3.5-1.57 3.5-3.5z"/>
+      <!-- Mouthpiece bump on mic arm -->
+      <circle cx="12" cy="22" r="0.9"/>
+    </svg>
+  </span>
+  <span class="lead-fab-label">Request a quote</span>
+</button>
+
+<!-- ========================= LEAD MODAL ========================= -->
+<div class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" aria-hidden="true">
+  <div class="lead-modal__card" data-lead-card>
+    <div class="lead-modal__head">
+      <div>
+        <div class="lead-modal__title" id="leadTitle">Request a quote</div>
+        <div class="lead-modal__sub">We'll get back to you within an hour during business hours.</div>
+      </div>
+      <button type="button" class="lead-modal__close" data-lead-close aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <form class="lead-form" data-lead-form novalidate>
+      <div class="lead-error" data-lead-error>Couldn't send. Please try again or message us on WhatsApp.</div>
+
+      <div class="lead-field">
+        <label for="leadName">Name</label>
+        <input type="text" id="leadName" name="name" placeholder="Your name" required autocomplete="name">
+      </div>
+      <div class="lead-field">
+        <label for="leadPhone">Phone or Telegram</label>
+        <input type="tel" id="leadPhone" name="phone" placeholder="+995 5XX XX XX XX" required autocomplete="tel">
+      </div>
+      <div class="lead-field">
+        <label for="leadMsg">What you need</label>
+        <textarea id="leadMsg" name="message" placeholder="Reel size, quantity, deadline…" rows="3"></textarea>
+      </div>
+      <input type="text" name="website" class="lead-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button type="submit" class="lead-submit" data-lead-submit>
+        <span class="spin" aria-hidden="true"></span>
+        <span data-lead-submit-label>Send request</span>
+      </button>
+      <div class="lead-foot">Or message us on <a href="https://wa.me/995320000000" target="_blank" rel="noopener" style="color:#0A0A0A;text-decoration:underline">WhatsApp</a></div>
+    </form>
+
+    <div class="lead-success" data-lead-success>
+      <div class="lead-success__check" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+      </div>
+      <div class="lead-success__title">Request sent</div>
+      <div class="lead-success__text">We'll be in touch within an hour during business hours.<br>Off-hours requests get a reply first thing the next morning.</div>
+    </div>
+  </div>
+</div>
+
 <script>
   /* Reveal */
   const io = new IntersectionObserver((entries) => {
@@ -2170,7 +2403,8 @@
     const mobileHero = document.querySelector('section.md\\:hidden.relative.overflow-hidden');
     const mobileCta = document.querySelector('.mobile-bottom-cta');
     const mobileBurger = document.querySelector('.mobile-burger-float');
-    let lastY = 0, ticking = false, lastDir = 0, navShown = false, ctaShown = false, burgerShown = false;
+    const leadFab = document.querySelector('.lead-fab');
+    let lastY = 0, ticking = false, lastDir = 0, navShown = false, ctaShown = false, burgerShown = false, fabShown = false;
 
     const onScroll = () => {
       const y = window.scrollY;
@@ -2204,6 +2438,18 @@
         if (mobileBurger) {
           if (pastMHero && !burgerShown) { mobileBurger.classList.add('is-visible'); mobileBurger.setAttribute('aria-hidden', 'false'); burgerShown = true; }
           else if (!pastMHero && burgerShown) { mobileBurger.classList.remove('is-visible'); mobileBurger.setAttribute('aria-hidden', 'true'); burgerShown = false; }
+        }
+      }
+
+      // Lead FAB: visible once whichever hero (desktop or mobile) is past
+      if (leadFab) {
+        const isWide = innerWidth >= 768;
+        const activeHero = isWide ? heroSection : mobileHero;
+        if (activeHero) {
+          const heroBot = activeHero.offsetTop + activeHero.offsetHeight;
+          const pastHero = y > heroBot - 120;
+          if (pastHero && !fabShown) { leadFab.classList.add('is-visible'); fabShown = true; }
+          else if (!pastHero && fabShown) { leadFab.classList.remove('is-visible'); fabShown = false; }
         }
       }
 
@@ -2267,6 +2513,125 @@
         el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
       });
     });
+  })();
+
+  /* ========================= LEAD CHAT (modal + Telegram bot) ========================= */
+  (() => {
+    /* === НАСТРОЙКА: вставьте токен бота и chat_id, куда слать заявки ===
+       1) В Telegram напишите @BotFather → /newbot → получите токен.
+       2) Узнайте свой chat_id через @userinfobot.
+       Пока поля пустые — форма работает в demo-режиме (показывает "Спасибо", в TG ничего не отправляет). */
+    const TG_BOT_TOKEN = '';
+    const TG_CHAT_ID   = '';
+
+    const modal      = document.querySelector('.lead-modal');
+    const card       = modal && modal.querySelector('[data-lead-card]');
+    const form       = modal && modal.querySelector('[data-lead-form]');
+    const successEl  = modal && modal.querySelector('[data-lead-success]');
+    const submitBtn  = modal && modal.querySelector('[data-lead-submit]');
+    const submitLbl  = modal && modal.querySelector('[data-lead-submit-label]');
+    const errorEl    = modal && modal.querySelector('[data-lead-error]');
+    if (!modal || !form) return;
+
+    let lastFocus = null;
+
+    const open = () => {
+      lastFocus = document.activeElement;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lead-modal-open');
+      setTimeout(() => modal.querySelector('input')?.focus(), 80);
+    };
+    const close = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lead-modal-open');
+      lastFocus?.focus?.();
+      // reset to form view after close (so reopen shows form again)
+      setTimeout(() => {
+        form.style.display = '';
+        successEl.classList.remove('is-shown');
+        errorEl.classList.remove('is-shown');
+      }, 300);
+    };
+
+    document.querySelectorAll('[data-lead-open]').forEach(b => b.addEventListener('click', open));
+    document.querySelectorAll('[data-lead-close]').forEach(b => b.addEventListener('click', close));
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+    });
+
+    const showSuccess = () => {
+      form.style.display = 'none';
+      successEl.classList.add('is-shown');
+      // auto-close after 4s
+      setTimeout(() => {
+        if (modal.classList.contains('is-open')) close();
+      }, 4000);
+    };
+
+    const setLoading = (on) => {
+      submitBtn.classList.toggle('is-loading', on);
+      submitBtn.disabled = on;
+      submitLbl.textContent = on ? 'Sending…' : 'Send request';
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorEl.classList.remove('is-shown');
+
+      const data = new FormData(form);
+      const name    = (data.get('name')    || '').toString().trim();
+      const phone   = (data.get('phone')   || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
+      const honey   = (data.get('website') || '').toString().trim();
+
+      if (honey) { showSuccess(); return; } // bot trap → silently "succeed"
+      if (!name || !phone) {
+        errorEl.textContent = 'Please enter your name and phone.';
+        errorEl.classList.add('is-shown');
+        return;
+      }
+
+      setLoading(true);
+
+      const time = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Tbilisi' });
+      const text =
+        '🔔 <b>New inquiry from website</b>\n\n' +
+        '👤 Name: ' + escapeHtml(name) + '\n' +
+        '📱 Contact: ' + escapeHtml(phone) + '\n' +
+        (message ? '💬 Inquiry: ' + escapeHtml(message) + '\n' : '') +
+        '\n🌐 magicstbilisi.ge\n🕐 ' + time + ' (Tbilisi)';
+
+      try {
+        if (TG_BOT_TOKEN && TG_CHAT_ID) {
+          const res = await fetch('https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: TG_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true })
+          });
+          const json = await res.json();
+          if (!res.ok || !json.ok) throw new Error(json.description || 'Telegram error');
+        } else {
+          // demo mode — no token configured yet
+          await new Promise(r => setTimeout(r, 700));
+          console.info('[lead-chat] demo mode — would send to Telegram:\n' + text.replace(/<[^>]+>/g, ''));
+        }
+        form.reset();
+        showSuccess();
+      } catch (err) {
+        console.error('[lead-chat] send failed:', err);
+        errorEl.textContent = 'Не удалось отправить. Попробуйте ещё раз или напишите в WhatsApp.';
+        errorEl.classList.add('is-shown');
+      } finally {
+        setLoading(false);
+      }
+    });
+
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+    }
   })();
 </script>
 
